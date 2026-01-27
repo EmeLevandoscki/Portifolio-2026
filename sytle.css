@@ -21,7 +21,7 @@ header {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    background: rgba(1, 65, 43, 0.6);   
+    background:     rgba(1, 65, 43, 0.341);   
     backdrop-filter: blur(12px);   
     -webkit-backdrop-filter: blur(12px); 
     position: sticky;
@@ -43,8 +43,7 @@ header {
 
 
 .logo span {
-    color: var(--primary-color);  
-    text-shadow: 0 0 10px rgba(14, 96, 131, 0.5);
+    color: #0aec9d;   
 }
 
 /* Navegação */
@@ -71,7 +70,7 @@ header nav ul li a {
  
 
 header nav ul li a:hover {
-    color: var(--primary-color);
+    color:#49a182;
 }
 
 
@@ -83,9 +82,8 @@ header nav ul li a::after {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background: var(--primary-color);
-    transition: width 0.3s ease;
-    box-shadow: 0 0 8px var(--primary-color);
+    background: #01412b ;
+    transition: width 0.3s ease; 
 }
 
 header nav ul li a:hover::after {
@@ -172,7 +170,7 @@ header nav ul li a:hover::after {
 /*foter*/
 
 footer {
-    height:9px;
+    height:5px;
     width: 100%;
     padding: 2rem 0;
     text-align: center;
