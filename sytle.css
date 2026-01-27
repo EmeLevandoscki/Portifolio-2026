@@ -1,0 +1,207 @@
+:root {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --primary-color: #38bdf8;
+    --secondary-bg: #01412b;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+ 
+
+header { 
+    padding: 0 10%;   
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background: rgba(1, 65, 43, 0.6);   
+    backdrop-filter: blur(12px);   
+    -webkit-backdrop-filter: blur(12px); 
+    position: sticky;
+    top: 0;
+    height: 70px; 
+    z-index: 1000;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.1); /
+}
+
+ 
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #fff;
+    cursor: default;
+}
+
+
+
+.logo span {
+    color: var(--primary-color);  
+    text-shadow: 0 0 10px rgba(14, 96, 131, 0.5);
+}
+
+/* Navegação */
+
+header nav ul {
+    display: flex;
+    gap: 2.5rem;  
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header nav ul li a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+ 
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+    box-shadow: 0 0 8px var(--primary-color);
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+.highlight { color: var(--primary-color); }
+
+#hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    background: var(--secondary-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #01412b;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+/*codigos binarios*/
+
+.pag-inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    width: 100%;
+}
+
+.sobre_mim {
+    width: 100%;
+    max-width: 900px;
+    z-index: 2; 
+    position: relative;
+    padding: 0 20px;
+}
+
+.binary-wrapper {
+    background-color: #001a11;
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    display: flex; 
+    justify-content: space-around;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.binary-column {
+    font-family: monospace;
+    font-size: 18px;
+    color: rgba(12, 148, 12, 0.4);
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.binary-column:nth-child(odd) { animation-duration: 11s; }
+.binary-column:nth-child(even) { animation-duration: 13s; }
+.binary-column:nth-child(3n) { animation-duration: 8s; animation-delay: 1s; }
+.binary-column:nth-child(4n) { animation-duration: 14s; animation-delay: 0.5s; }
+.binary-column:nth-child(5n) { animation-duration: 11s; animation-delay: 2s; }
+.binary-column:nth-child(6n) { animation-duration: 16s; animation-delay: 1.2s; }
+.binary-column:nth-child(7n) { animation-duration: 9s; animation-delay: 1.8s; }
+
+/*foter*/
+
+footer {
+    height:9px;
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    background: rgba(1, 65, 43, 0.3);  
+    border-top: 1px solid rgba(56, 189, 248, 0.1); 
+    position: relative;
+    z-index: 2; 
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #94a3b8; 
+}
+
+.github-link {
+    color: #94a3b8;
+    text-decoration: none; 
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.github-link:hover {
+    color: #fff; 
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.github-link i {
+    font-size: 1.2rem;
+}
