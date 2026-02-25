@@ -155,7 +155,7 @@ header nav ul li a:hover::after {
     height: 500px;
     z-index: 2; 
     position: relative;
-    border: 1px solid rgba(6, 255, 168, 0.3);
+    border: 1px solid rgba(6, 255, 168, 0.167);
     margin: 40px auto;
     background: #0d1117da;   
     border-radius: 8px;
