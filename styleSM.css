@@ -22,218 +22,96 @@ body {
         height: 100vh;
 }
 
-header { 
-    padding: 0 10%;   
-    display: flex; 
-    justify-content: space-between; 
-    background: rgba(1, 65, 43, 0.341);   
-    backdrop-filter: blur(12px);   
-    -webkit-backdrop-filter: blur(12px); 
-    position: sticky;
-    top: 0;
-    min-height: 70px; 
-    z-index: 1000;
-    border-bottom: 1px solid rgba(56, 189, 248, 0.1); 
-}       
-
-    
-
-/* Navegação */
-
-header nav ul {
-    display: flex;
-    gap: 2.5rem;  
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #cbd5e1;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-header nav ul li a:hover {
-    color:#ff7b72;
-}
-
-header nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background: #ff7b72 ;
-    transition: width 0.3s ease; 
-}
-
-header nav ul li a:hover::after {
-    width: 100%;
-}
-
-/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-.card1{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    background-color: #0d1117da;   
-    padding: 20px; 
-     width: 2000px;
-     height: 900px;
-    box-shadow: 0 20px 40px #0d1117da;   
-    border: 1px solid #0d1117da;   
-    z-index: 5;
-}
-
-.code-card {
-    min-width:1000px;
-    max-width: 600px;
-    background-color: #1e1e1e;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(18, 82, 22, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 40px auto;
-    z-index: 5;
-    user-select: none;  
-}
-
-.editor-header {
-    background-color: #2d2d2d;
-    padding: 12px 15px;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.editor-buttons {
-    display: flex;
-    gap: 8px;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-.red { background-color: #ff5f56; }
-.yellow { background-color: #ffbd2e; }
-.green { background-color: #27c93f; }
-
-.editor-title {
-    color: #858585;
-    font-size: 0.8rem;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    left: 0;
-}
-
-.code-content {
-    padding: 20px;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    text-align: left;
-}
-
-/* Cores do Código (Enfeite) */
-.keyword { color: #c678dd; }    
-.variable { color: #e06c75; }  
-.string { color: #98c379; }     
-.function { color: #61afef; }  
-.method { color: #d19a66; }    
-
-pre { margin: 0; }
-code { color: #abb2bf; }       
-
-/*binario codigo /////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-.pag-inicial {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    width: 100%;
-    flex: 1;
-}
-
  
 
-.binary-wrapper {
-    background-color: #000c08;
-    position: fixed;  
-    top: 0;
-    left: 0;
-    width: 100vw; 
-    height: 100vh;
-    display: flex; 
-    justify-content: space-around;
+body {
+    background-color: var(--bg);
+    color: var(--text); 
+    overflow-x: hidden;
+}
+
+/* Background suave para não parecer vazio */
+.blob-bg {
+    position: fixed;
+    top: -10%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
     z-index: -1;
+}
+
+section {
+    min-height: 100vh;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Animação de Scroll aprimorada */
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-50px); /* Vem da esquerda */
+    transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+/* Efeito nos Cards de Projeto */
+.projeto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 40px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
     overflow: hidden;
-    pointer-events: none;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
-.binary-column {
-    font-family: monospace;
-    font-size: 18px;
-    color: rgba(14, 188, 14, 0.4);
-    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
-    writing-mode: vertical-rl;
-    white-space: nowrap;
-    animation: fall linear infinite;
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
 }
 
-@keyframes fall {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
+/* Estilização do Formulário */
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.binary-column:nth-child(odd) { animation-duration: 11s; }
-.binary-column:nth-child(even) { animation-duration: 13s; }
-.binary-column:nth-child(3n) { animation-duration: 8s; animation-delay: 1s; }
-.binary-column:nth-child(4n) { animation-duration: 14s; animation-delay: 0.5s; }
-.binary-column:nth-child(5n) { animation-duration: 11s; animation-delay: 2s; }
-.binary-column:nth-child(6n) { animation-duration: 16s; animation-delay: 1.2s; }
-.binary-column:nth-child(7n) { animation-duration: 9s; animation-delay: 1.8s; }
-
-/*foter*/
-
-footer {
+input, textarea {
     width: 100%;
-    padding: 2rem 0;
-    text-align: center; 
-    position: relative;
-    z-index: 2; 
-    margin-top: auto;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    color: white;
+    border-radius: 8px;
 }
 
-footer p {
-    font-size: 0.9rem;
-    color: #94a3b8; 
-    margin: 0;
+button {
+    background: var(--primary);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: filter 0.2s;
 }
 
-.github-link {
-    color: #94a3b8;
-    text-decoration: none; 
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.github-link:hover {
-    color: #fff; 
-    transform: translateY(-2px);
-    text-shadow: 0 0 10px var(--primary-color);
-}
-
-.github-link i {
-    font-size: 1.2rem;
+button:hover {
+    filter: brightness(1.2);
 }
