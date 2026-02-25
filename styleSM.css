@@ -21,97 +21,84 @@ body {
     flex-direction: column;
         height: 100vh;
 }
+   /* RESET E CORES */
+:root {
+    --bg-color: #0a0a0a;
+    --terminal-bg: #121212;
+    --green-neon: #4ade80;
+    --blue-neon: #38bdf8;
+    --orange-neon: #fb923c;
+    --text-color: #e2e8f0;
+    --tag-color: #f87171;
+}
 
- 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Code', monospace;
+}
 
 body {
-    background-color: var(--bg);
-    color: var(--text); 
-    overflow-x: hidden;
+    background-color: var(--bg-color);
+    z-index: 0;
+    color: var(--text-color); 
+    background-image: linear-gradient(rgba(74, 222, 128, 0.05) 1px, transparent 1px);
+    background-size: 100% 20px;
 }
 
-/* Background suave para não parecer vazio */
-.blob-bg {
-    position: fixed;
-    top: -10%;
-    right: -10%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
-    z-index: -1;
-}
-
-section {
-    min-height: 100vh;
-    padding: 100px 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Animação de Scroll aprimorada */
+ 
+/* ANIMAÇÃO DE ROLAGEM */
 .hidden {
     opacity: 0;
-    filter: blur(10px);
-    transform: translateX(-50px); /* Vem da esquerda */
-    transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.8s ease-out;
 }
 
 .show {
     opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
+    transform: translateY(0) scale(1);
 }
 
-/* Efeito nos Cards de Projeto */
-.projeto-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 40px;
-}
+/* CODIGO BIANRIO////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-.card {
-    background: var(--card-bg);
-    border-radius: 15px;
+
+.binary-wrapper {
+    background-color: #000c08;
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    display: flex; 
+    justify-content: space-around;
+    z-index: -1;
     overflow: hidden;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255,255,255,0.1);
+    pointer-events: none;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary);
+.binary-column {
+    font-family: monospace;
+    font-size: 18px;
+    color: rgba(14, 188, 14, 0.048);
+    text-shadow: 0 0 10px rgba(56, 191, 248, 0.047);
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    animation: fall linear infinite;
 }
 
-/* Estilização do Formulário */
-.form-wrapper {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+@keyframes fall {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
 }
 
-input, textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    background: #0f172a;
-    border: 1px solid #334155;
-    color: white;
-    border-radius: 8px;
-}
+.binary-column:nth-child(odd) { animation-duration: 11s; }
+.binary-column:nth-child(even) { animation-duration: 13s; }
+.binary-column:nth-child(3n) { animation-duration: 8s; animation-delay: 1s; }
+.binary-column:nth-child(4n) { animation-duration: 14s; animation-delay: 0.5s; }
+.binary-column:nth-child(5n) { animation-duration: 11s; animation-delay: 2s; }
+.binary-column:nth-child(6n) { animation-duration: 16s; animation-delay: 1.2s; }
+.binary-column:nth-child(7n) { animation-duration: 9s; animation-delay: 1.8s; }
 
-button {
-    background: var(--primary);
-    color: white;
-    padding: 15px 40px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: filter 0.2s;
-}
 
-button:hover {
-    filter: brightness(1.2);
-}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
