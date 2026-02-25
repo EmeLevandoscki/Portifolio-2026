@@ -1,0 +1,321 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+ 
+
+:root {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --primary-color: #38bdf8;
+    --secondary-bg: #01412b;
+}
+
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+        height: 100vh;
+}
+   /* RESET E CORES */
+:root {
+    --bg-color: #0a0a0a;
+    --terminal-bg: #121212;
+    --green-neon: #4ade80;
+    --blue-neon: #38bdf8;
+    --orange-neon: #fb923c;
+    --text-color: #e2e8f0;
+    --tag-color: #f87171;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Code', monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+    z-index: 0;
+    color: var(--text-color); 
+    background-image: linear-gradient(rgba(74, 222, 128, 0.05) 1px, transparent 1px);
+    background-size: 100% 20px;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color:  rgba(16, 15, 15, 0.641);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--green-neon);
+}
+
+/* CONTAINER DA JANELA */
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.terminal-window {
+    width: 100%;
+    margin-top: 100px;
+    max-width: 1000px;
+    height: 450px;
+    background: var(--terminal-bg);
+    border-radius: 10px;
+    border: 1px solid #333;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* foto */
+.foto-perfil img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #00ffcc;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.foto-perfil img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+}
+
+/* texto ocupa o restante */
+.sobre-texto {
+    flex: 1;
+}
+
+ 
+/* TOPO DA JANELA */
+.terminal-header {
+    background: #1e1e1e;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.buttons { display: flex; gap: 8px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminal-title {
+    margin-left: 20px;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+/* CORPO DO TERMINAL */
+.terminal-body {
+    padding: 40px;
+    line-height: 1.6;
+}
+
+.code-tag { color: var(--tag-color); }
+.highlight-blue { color: var(--blue-neon); font-weight: bold; }
+.highlight-orange { color: var(--orange-neon); }
+.comment { color: #666; font-style: italic; margin: 20px 0; }
+
+/* BOTÕES ESTILO TERMINAL ////////////////////////////////////////////////////////////*/
+
+/* Estilo para os círculos */
+
+.eclipse ul {
+  list-style: none; /* Remove os marcadores da lista */
+  display: flex; /* Alinha os itens em linha */
+  gap: 40px; /* Espaçamento horizontal entre os círculos */
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+  margin-left: -50px;
+}
+    
+.eclipse{
+  margin-top: 90px;
+  margin-left: 90px;
+}
+
+.bx.bxl-github {
+    
+  color: #BF612A;
+  font-size: 35px;
+  margin-top: 5px;
+  margin-left: 7px;
+}
+
+.bx.bxl-linkedin {
+        
+  color: #BF612A;
+  font-size: 35px;
+  margin-top: 5px;
+  margin-left: 7px;
+}
+
+.bx.bxl-instagram{
+  color: #BF612A;
+  font-size: 35px;
+  margin-top: 5px;
+  margin-left: 7px;
+}
+
+.bx.bxl-whatsapp{
+  color: #BF612A;
+  font-size: 35px;
+  margin-top: 5px;
+  margin-left: 7px;
+}
+
+
+/*hover//////////////////////////////////////////////////////////////////////////////////////////*/
+.bx.bxl-github:hover { 
+    color: rgb(128, 0, 128);
+    background:  rgba(250, 250, 250, 0.621) ; 
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.621); 
+  border-radius: 50%;
+}
+
+.bx.bxl-linkedin:hover { 
+    color: blue;
+    border-radius: 50%;
+    background:  rgba(254, 255, 255, 0.621) ; 
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.621); 
+}
+
+.bx.bxl-instagram:hover { 
+    color: #E1306C;
+    border-radius: 50%;
+    background:  rgba(243, 243, 243, 0.201) ; 
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.621); 
+}
+
+.bx.bxl-whatsapp:hover { 
+    color: rgb(39, 201, 63);
+    border-radius: 50%;
+    background:  rgba(243, 243, 243, 0.201) ; 
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.621); 
+} 
+
+/*efeito active////////////////////////////////////////////////////////////////////////////////*/
+.bx.bxl-github:active {
+    color: rgba(250, 250, 250, 0.767);
+     background:rgba(128, 0, 128, 0.767)  ;
+       box-shadow: 0 0 45px rgba(128, 0, 128, 0.767);
+  transform: translateY(3px);   
+}
+
+.bx.bxl-linkedin:active {
+     color: rgb(255, 255, 255);
+    border-radius: 50%;
+    background:  rgba(0, 0, 255, 0.707) ; 
+  box-shadow: 0 0 55px rgb(0, 0, 255); 
+  transform: translateY(3px);   
+}
+
+.bx.bxl-instagram:active {
+    color: #e2e8f0;     
+background: linear-gradient(
+  45deg,
+  #F58529,
+  #DD2A7B,
+  #8134AF,
+  #515BD4
+);  
+    box-shadow:
+  0 0 10px #F58529,
+  0 0 10px #DD2A7B,
+  0 0 10px #8134AF,
+  0 0 20px #515BD4;
+
+  transform: translateY(3px);   
+}
+
+.bx.bxl-whatsapp:active {
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    background:  rgba(0, 246, 37, 0.636) ; 
+  box-shadow: 0 0 35px rgba(39, 201, 63, 0.621);
+  transform: translateY(3px);   
+}
+ 
+
+/*boteos terminal//////////////////////////////////////////////////////////////////////////////////*/
+
+.btn-group {
+    margin-top: -45px;
+    margin-left: 500px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.btn-terminal {
+  border-radius: 10px;
+  border: 3px solid #03738C;
+  background: #081E26;
+  box-shadow: 6px 5px 10px 2px rgba(191, 97, 42, 0.25);
+  width: 140px;
+  height: 50px;
+
+  color: #BF612A;
+
+  display: flex;              
+  align-items: center;        
+  justify-content: center;    
+
+  text-decoration: none;     
+}
+
+.btn-terminal:hover { 
+  box-shadow: 0 0 15px rgba(3, 115, 140, 0.621); 
+}
+
+.btn-terminal:active {
+  transform: translateY(3px);  
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
+}
+/* ANIMAÇÃO DE ROLAGEM */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
