@@ -11,8 +11,9 @@
 
 
 body {
+    align-items: center;
     font-family: 'Roboto Mono', monospace;
-    background-color: var(--bg-color);
+    background-color: black;
     color: var(--text-color);
     margin: 0;
     line-height: 1.6;
@@ -23,6 +24,7 @@ body {
 }
 
 header { 
+    
     padding: 0 10%;   
     display: flex; 
     justify-content: space-between; 
@@ -31,13 +33,16 @@ header {
     backdrop-filter: blur(12px);   
     -webkit-backdrop-filter: blur(12px); 
     position: sticky;
-    top: 0;
+    border-radius: 20px;
+    top: 10px; 
+    width: 10px;
     height: 70px; 
     z-index: 1000;
     border-bottom: 1px solid rgba(56, 189, 248, 0.1); 
 }       
 
 .logo {
+    
     font-size: 1.6rem;
     font-weight: 800;
     color: #fff;
@@ -45,20 +50,33 @@ header {
 }
 
 .logo span {
+    
     color: #ffbd2eaf;   
 }
 
 /* Navegação */
 
 header nav ul {
+    
+
     display: flex;
     gap: 2.5rem;  
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
-header nav ul li a {
+.projetos { 
+    margin-left: -190px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+header nav ul li a { 
+    align-items: center;
     text-decoration: none;
     color: #cbd5e1;
     font-size: 0.95rem;
@@ -353,4 +371,78 @@ footer p {
 
 .github-link i {
     font-size: 1.2rem;
+}
+
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////*/
+
+.sobre_mim {
+    opacity: 0;
+    transform: scale(1) translateY(30px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); 
+}
+
+.code-content h1, 
+.code-content p, 
+.code-comment, 
+.btn-group {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.6s ease-out;
+}
+
+.binary-wrapper {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 2s ease, transform 1.5s ease-out;
+}
+
+.sobre_mim.ready {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0);
+}
+
+.binary-wrapper.ready {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sobre_mim.ready .code-content h1 { opacity: 1; transform: translateX(0); transition-delay: 0.4s; }
+.sobre_mim.ready .code-content p { opacity: 1; transform: translateX(0); transition-delay: 0.7s; }
+.sobre_mim.ready .code-comment { opacity: 1; transform: translateX(0); transition-delay: 1s; }
+.sobre_mim.ready .btn-group { opacity: 1; transform: translateX(0); transition-delay: 1.3s; }
+
+
+
+
+
+/*efeito da digitacao/////////////////////////////////////////*/
+
+.typing {
+  vertical-align: middle;
+}
+.typing {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #03738C;
+
+  width: 0;
+animation: typing 10s steps(19, end) infinite, blink 0.7s infinite;
+}
+ 
+@keyframes typing {
+  0% { width: 0 }
+  40% { width: 19ch }   
+  60% { width: 19ch }   
+  100% { width: 0 }      
+}
+
+/* cursor piscando */
+@keyframes blink {
+  0%, 50%, 100% { border-color: transparent }
+  25%, 75% { border-color: #03738C }
 }

@@ -11,7 +11,18 @@
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-// Efeito cascata para as habilidades (opcional)
+
+
+//efrito de entrada 
 document.querySelectorAll('.skill-tag').forEach((el, index) => {
     el.style.transitionDelay = `${index * 100}ms`;
+});
+
+
+window.addEventListener('load', () => {
+    const terminal = document.querySelector('.terminal-window');
+     
+    setTimeout(() => {
+        terminal.classList.add('show-glow');
+    }, 500);
 });

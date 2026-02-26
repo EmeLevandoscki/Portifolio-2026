@@ -49,17 +49,33 @@ body {
 
  
 /* ANIMAÇÃO DE ROLAGEM */
+
+
+/* Estado inicial: Invisível, levemente abaixo e desfocado */
 .hidden {
     opacity: 0;
-    transform: translateY(50px) scale(0.95);
+    filter: blur(5px);
+    transform: translateY(50px);
     transition: all 0.8s ease-out;
 }
-
+ 
 .show {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    filter: blur(0);
+    transform: translateY(0);
+}
+ 
+.projeto-grid .card:nth-child(2) { transition-delay: 200ms; }
+.projeto-grid .card:nth-child(3) { transition-delay: 400ms; }
+ 
+#habilidades.show .skill-tag {
+    animation: popIn 0.5s cubic-bezier(0.26, 0.53, 0.74, 1.48) forwards;
 }
 
+@keyframes popIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
 /* CODIGO BIANRIO////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
@@ -102,3 +118,5 @@ body {
 
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+

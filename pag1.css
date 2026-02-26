@@ -76,12 +76,11 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px; 
 }
 
 .terminal-window {
-    width: 100%;
-    margin-top: 100px;
+    width: 100%; 
     max-width: 1000px;
     height: 450px;
     background: var(--terminal-bg);
@@ -309,13 +308,53 @@ background: linear-gradient(
   box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
 }
 /* ANIMAÇÃO DE ROLAGEM */
-.hidden {
-    opacity: 0;
+
+.hidden1 { 
+    border-radius: 15px;
+    padding: 15px;
+    background: rgba(34, 34, 34, 0.33);
+    transform: translateY(50px) scale(0.95);
     transform: translateY(50px) scale(0.95);
     transition: all 0.8s ease-out;
 }
 
-.show {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+/* Animação base */
+@keyframes entradaSuave {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+ 
+.terminal-window, .foto-perfil, .line, .comment, .eclipse, .btn-group {
+    opacity: 0;
+    animation: entradaSuave 0.8s ease-out forwards;
+} 
+.terminal-window { 
+    animation-delay: 0.2s; 
+}
+
+.foto-perfil { 
+    animation-delay: 0.6s; 
+}
+
+.sobre-texto .line:nth-child(1) { animation-delay: 0.9s; } /* "Olá, eu sou..." */
+.sobre-texto .line:nth-child(2) { animation-delay: 1.2s; } /* Descrição */
+.comment { animation-delay: 1.5s; }                         /* Comentário // */
+.eclipse { animation-delay: 1.8s; }                         /* Ícones sociais */
+.btn-group { animation-delay: 2.1s; }                       /* Botão currículo */
+ 
+.terminal-window {
+    box-shadow: 0 0 0 rgba(0, 212, 255, 0);
+    transition: box-shadow 1s ease;
+}
+
+.terminal-window.show-glow {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 212, 255, 0.2);
 }

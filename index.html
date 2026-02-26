@@ -10,11 +10,10 @@
 </head>
 <body>
 <header> 
-    <nav>
-        <ul>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#contact">Contato</a></li>
+    <nav class="projetos">
+        <ul> 
+            <li><a href="indexSM.html#projetos">Projetos</a></li>
+            <li><a href="indexSM.html#contato">Contato</a></li>
         </ul>
     </nav>
 </header>
@@ -39,7 +38,7 @@
         <div id="hero">
             <h1>
                 <span class="code-tag">&lt;h1&gt;</span>
-                Olá, eu sou <span class="code-string"> <span class="highlight">Emelly Levandoscki</span> </span>
+                Olá, eu sou <span class="code-string"> <span class="typing">Emelly Levandoscki</span> </span>
                 <span class="code-tag">&lt;/h1&gt;</span>
             </h1>
 <p>
@@ -53,8 +52,10 @@
     <div class="code-comment">// Movida pela curiosidade e pelo desejo de criar algo real.</div>
     
 <div class="btn-group">
-    <a href="#projects" class="btn">Mais_s0bre_mim.exe</a>
-    <a href="#projects" class="btn">currículo.pdf</a>
+    <a href="indexSM.html" class="btn">Mais_s0bre_mim.exe</a>
+    <a href="curriculo.pdf" class="btn" download="Curriculo_Emelly_Levandoscki.pdf">
+    currículo.pdf
+</a>
 </div>
         </div>
     </div>
@@ -139,6 +140,21 @@
     </p>
 </footer>
 
-    <script src="script.js"></script>
+    <script >
+window.addEventListener('DOMContentLoaded', () => {
+    const boxSobreMim = document.querySelector('.sobre_mim');
+    const binaryBackground = document.querySelector('.binary-wrapper');
+
+    setTimeout(() => {
+        if (binaryBackground) {
+            binaryBackground.classList.add('ready');
+        }
+        
+        if (boxSobreMim) {
+            boxSobreMim.classList.add('ready');
+        }
+    }, 300);
+});
+    </script>
 </body>
 </html>
