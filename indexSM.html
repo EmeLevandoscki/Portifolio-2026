@@ -6,6 +6,7 @@
     <title>Portfólio | Emelly Levandoscki</title>
     <link rel="stylesheet" href="styleSM.css">
     <link rel="stylesheet" href="pag1.css" >
+    <link rel="stylesheet" href="formulaeio.css">
 
         <!-- fonte 'Righteous' -->
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
@@ -13,7 +14,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-     <div class="binary-wrapper">
+    <div class="binary-wrapper">
 
                 <div class="binary-column">10101010101010101010100101010101011010101010101010110011010101010101010101010100101010101011010101010101010110011010010101010101011010101010101010101010110101010101010101010101011010101101010</div>
         <div class="binary-column">101010101010101010101001010101010110101010101010101100110101010101010101010101001010101010110101010101010101100110100101010101010110101010101010101010101101010101010101010101010110101011010101</div>
@@ -86,7 +87,7 @@
 
     <main>
         
-<section id="sobre" class="hidden">
+<section id="sobre" class="hidden1">
             <div class="terminal-window">
                 <div class="terminal-header">
                     <div class="buttons">
@@ -112,12 +113,39 @@
         
 
         <div class="eclipse">
-                <ul>
-                  <li><div class="circle">  <i class='bx bxl-github'></i>  </div></li>
-                  <li><div class="circle">  <i class='bx bxl-linkedin' >   </i> </div></li>
-                  <li><div class="circle">  <i class='bx bxl-instagram' >   </i></div></li>
-                  <li><div class="circle">  <i class='bx bxl-whatsapp' ></i></div></li> 
-                </ul>
+<ul>
+  <li>
+    <div class="circle">
+      <a href="https://github.com/EmeLevandoscki" target="_blank">
+        <i class='bx bxl-github'></i>
+      </a>
+    </div>
+  </li>
+
+  <li>
+    <div class="circle">
+      <a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank">
+        <i class='bx bxl-linkedin'></i>
+      </a>
+    </div>
+  </li>
+
+  <li>
+    <div class="circle">
+      <a href="#contato">
+        <i class='bx bxl-instagram'></i>
+      </a>
+    </div>
+  </li>
+
+  <li>
+    <div class="circle">
+      <a href="#contato">
+        <i class='bx bxl-whatsapp'></i>
+      </a>
+    </div>
+  </li>
+</ul>
               </div>
 
         <div class="btn-group"> 
@@ -155,18 +183,60 @@
             </div>
         </section>
 
-        <section id="contato" class="hidden">
-            <div class="form-wrapper">
-                <h2>Vamos conversar?</h2>
-                <p>Mande uma mensagem e responderei em até 24h.</p>
-                <form action="https://formsubmit.co/seuemail@email.com" method="POST">
-                    <input type="text" name="nome" placeholder="Seu Nome" required>
-                    <input type="email" name="email" placeholder="Seu E-mail" required>
-                    <textarea name="mensagem" rows="5" placeholder="Como posso te ajudar?" required></textarea>
-                    <button type="submit">Enviar Mensagem</button>
-                </form>
-            </div>
-        </section>
+<section id="contato" class="contact-section hidden">
+  <div class="form-container">
+
+    <header class="form-header">
+      <h2>Vamos conversar!</h2>
+      <p>Descreva sua duvida e eu entro em contato o mais rápido possível.</p>
+    </header>
+
+    <form 
+      action="https://formsubmit.co/emylevandoscki@gmail.com" 
+      method="POST" 
+      class="contact-form"
+    >
+
+      <!-- configs formsubmit -->
+      <input type="hidden" name="_subject" value="Novo contato pelo portfólio">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="form-grid">
+
+        <div class="field">
+          <input type="text" name="nome" required>
+          <label>Nome completo</label>
+        </div>
+
+        <div class="field">
+          <input type="email" name="email" required>
+          <label>Email para resposta</label>
+        </div>
+
+        <div class="field full">
+          <input type="text" name="assunto" required>
+          <label>Assunto</label>
+        </div>
+
+        <div class="field full">
+          <textarea name="mensagem" rows="5" required></textarea>
+          <label>Mande uma mensagem ou uma sugestão </label>
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn-send">
+        Enviar mensagem 🚀
+      </button>
+
+      <p class="form-note">
+        🔒 Seus dados não serão compartilhados.
+      </p>
+
+    </form>
+  </div>
+</section>
     </main>
 
     <script src="script.js"></script>

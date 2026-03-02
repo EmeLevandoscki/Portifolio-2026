@@ -1,122 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap');
+
+/* ================= VARIÁVEIS ================= */
  
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
- 
 
-:root {
-    --bg-color: #0f172a;
-    --text-color: #f8fafc;
-    --primary-color: #38bdf8;
-    --secondary-bg: #01412b;
-}
-
-
-body {
-    font-family: 'Roboto Mono', monospace;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
-    line-height: 1.6;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-        height: 100vh;
-}
-   /* RESET E CORES */
-:root {
-    --bg-color: #0a0a0a;
-    --terminal-bg: #121212;
-    --green-neon: #4ade80;
-    --blue-neon: #38bdf8;
-    --orange-neon: #fb923c;
-    --text-color: #e2e8f0;
-    --tag-color: #f87171;
-}
-
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Fira Code', monospace;
 }
 
+:root {
+    --bg-color: #0F172A;          /* azul escuro elegante */
+    --bg-secondary: #111827;      /* fundo de cards */
+    --terminal-bg: #0B1220;
+
+    --text-color: #E5E7EB;
+    --text-muted: #9CA3AF;
+
+    --primary-color: #22C55E;     /* verde moderno */
+    --accent-color: #38BDF8;      /* azul neon suave */
+
+    --border-color: rgba(255,255,255,0.08);
+}
+
+/* FUNDO MAIS LEVE */
 body {
-    background-color: var(--bg-color);
-    z-index: 0;
-    color: var(--text-color); 
-    background-image: linear-gradient(rgba(74, 222, 128, 0.05) 1px, transparent 1px);
-    background-size: 100% 20px;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--text-color);
+    background:
+        radial-gradient(circle at 15% 20%, #162033, #0F172A 60%);
+    line-height: 1.6;
 }
 
- 
-/* ANIMAÇÃO DE ROLAGEM */
+/* ================= GRID BACKGROUND ================= */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 100% 22px;
+    pointer-events: none;
+    z-index: -1;
+}
 
-
-/* Estado inicial: Invisível, levemente abaixo e desfocado */
+/* ================= ANIMAÇÕES ================= */
 .hidden {
     opacity: 0;
     filter: blur(5px);
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
 }
- 
+
 .show {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
 }
- 
-.projeto-grid .card:nth-child(2) { transition-delay: 200ms; }
-.projeto-grid .card:nth-child(3) { transition-delay: 400ms; }
- 
+
+/* Delay em grid */
+.projeto-grid .card:nth-child(2) { transition-delay: 150ms; }
+.projeto-grid .card:nth-child(3) { transition-delay: 300ms; }
+
+/* Tags */
 #habilidades.show .skill-tag {
-    animation: popIn 0.5s cubic-bezier(0.26, 0.53, 0.74, 1.48) forwards;
+    animation: popIn 0.45s cubic-bezier(0.26, 0.53, 0.74, 1.48) forwards;
 }
 
 @keyframes popIn {
-    from { transform: scale(0); opacity: 0; }
+    from { transform: scale(0.7); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
-/* CODIGO BIANRIO////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-
+/* ================= MATRIX BACKGROUND ================= */
 .binary-wrapper {
-    background-color: #000c08;
-    position: fixed;  
-    top: 0;
-    left: 0;
-    width: 100vw; 
-    height: 100vh;
-    display: flex; 
+    position: fixed;
+    inset: 0;
+    display: flex;
     justify-content: space-around;
-    z-index: -1;
     overflow: hidden;
+    z-index: -2;
     pointer-events: none;
 }
 
 .binary-column {
     font-family: monospace;
     font-size: 18px;
-    color: rgba(14, 188, 14, 0.048);
-    text-shadow: 0 0 10px rgba(56, 191, 248, 0.047);
+    color: rgba(74, 222, 128, 0.06);
     writing-mode: vertical-rl;
     white-space: nowrap;
     animation: fall linear infinite;
 }
 
 @keyframes fall {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
 }
 
 .binary-column:nth-child(odd) { animation-duration: 11s; }
 .binary-column:nth-child(even) { animation-duration: 13s; }
-.binary-column:nth-child(3n) { animation-duration: 8s; animation-delay: 1s; }
-.binary-column:nth-child(4n) { animation-duration: 14s; animation-delay: 0.5s; }
-.binary-column:nth-child(5n) { animation-duration: 11s; animation-delay: 2s; }
-.binary-column:nth-child(6n) { animation-duration: 16s; animation-delay: 1.2s; }
-.binary-column:nth-child(7n) { animation-duration: 9s; animation-delay: 1.8s; }
+.binary-column:nth-child(3n) { animation-duration: 9s; animation-delay: 1s; }
+.binary-column:nth-child(4n) { animation-duration: 15s; animation-delay: .5s; }
 
+/* ================= CARD PADRÃO ================= */
+.card {
+    background: var(--terminal-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: 0.25s ease;
+}
 
-/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}

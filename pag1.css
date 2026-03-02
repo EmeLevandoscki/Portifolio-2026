@@ -47,27 +47,64 @@ body {
     background-size: 100% 20px;
 }
 
-/* NAVBAR */
+/* NAVBAR */ 
 .navbar {
-    background-color:  rgba(16, 15, 15, 0.641);
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 30px;
     position: fixed;
-    width: 100%;
-    z-index: 100;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    padding: 12px 28px;
+    width: fit-content;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 999px;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+
+    z-index: 1000;
 }
 
+/* LINKS */
 .navbar a {
+    position: relative;
     color: var(--text-color);
     text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    padding: 6px 4px;
+    transition: all 0.25s ease;
+}
+
+/* LINHA ANIMADA */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #38bdf8, #8b5cf6);
+    transition: width 0.25s ease;
 }
 
 .navbar a:hover {
-    color: var(--green-neon);
+    color: #fff;
+}
+
+.navbar a:hover::after {
+    width: 100%;
 }
 
 /* CONTAINER DA JANELA */
@@ -276,46 +313,49 @@ background: linear-gradient(
 /*boteos terminal//////////////////////////////////////////////////////////////////////////////////*/
 
 .btn-group {
-    margin-top: -45px;
+    margin-top: -70px;
     margin-left: 500px;
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
 }
 .btn-terminal {
-  border-radius: 10px;
-  border: 3px solid #03738C;
-  background: #081E26;
-  box-shadow: 6px 5px 10px 2px rgba(191, 97, 42, 0.25);
-  width: 140px;
-  height: 50px;
+    margin-top: 30px;
+    padding: 12px 26px;
+    background: #0b0f14;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
 
-  color: #BF612A;
-
-  display: flex;              
-  align-items: center;        
-  justify-content: center;    
-
-  text-decoration: none;     
 }
 
-.btn-terminal:hover { 
-  box-shadow: 0 0 15px rgba(3, 115, 140, 0.621); 
+.btn-terminal::after {
+    content: ">";
+    position: absolute;
+    left: 10px;
+    opacity: 0;
+    transition: 0.3s;
 }
 
-.btn-terminal:active {
-  transform: translateY(3px);  
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
+.btn-terminal:hover {
+    padding-left: 32px;
+    background: rgba(167, 178, 171, 0.08);
+    box-shadow: 0 0 12px rgba(177, 199, 185, 0.6);
 }
+
+.btn-terminal:hover::after {
+    opacity: 1;
+}
+
 /* ANIMAÇÃO DE ROLAGEM */
 
-.hidden1 { 
-    border-radius: 15px;
-    padding: 15px;
-    background: rgba(34, 34, 34, 0.33);
-    transform: translateY(50px) scale(0.95);
-    transform: translateY(50px) scale(0.95);
-    transition: all 0.8s ease-out;
+.hidden1 {   
+    border: 0px  0px 50px 50px;
+    background: rgba(42, 42, 42, 0.267); 
 }
 
 /* Animação base */
