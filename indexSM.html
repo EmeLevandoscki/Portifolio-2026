@@ -6,6 +6,7 @@
     <title>Portfólio | Emelly Levandoscki</title>
     <link rel="stylesheet" href="styleSM.css">
     <link rel="stylesheet" href="pag1.css" >
+    <link rel="stylesheet" href="projetos.css" >
     <link rel="stylesheet" href="formulaeio.css">
 
         <!-- fonte 'Righteous' -->
@@ -157,19 +158,188 @@
             </div>
         </section>
 
-        <section id="projetos" class="hidden">
-            <h2>Projetos em Destaque</h2>
-            <div class="projeto-grid">
-                <div class="card">
-                    <div class="card-img"></div>
-                    <div class="card-info">
-                        <h3>Título do Projeto</h3>
-                        <p>Descrição detalhada do que você fez, tecnologias usadas e o impacto do projeto.</p>
-                        <a href="#">Ver Repositório</a>
+<section id="projetos" class="projects-section">
+    
+    <h2 class="section-title-destaque">
+        <span class="bracket">&lt;</span>
+        <span class="text-glow">PROJETOS_EM_DESTAQUE</span>
+        <span class="bracket">/&gt;</span>
+    </h2>
+    <!-- filtro de projetos -->
+
+    <div class="filtro-projetos">
+    <button class="btn-filtro ativo" data-filter="all">Todos</button>
+    <button class="btn-filtro" data-filter="java">Java</button>
+    <button class="btn-filtro" data-filter="python">Python</button>
+    <button class="btn-filtro" data-filter="php">PHP</button>
+    <button class="btn-filtro" data-filter="mysql">MySql</button>
+    <button class="btn-filtro" data-filter="postgresql">PostgreSQL</button>
+    <button class="btn-filtro" data-filter="javascript">JavaScript</button>
+</div>
+
+    <div class="projeto-grid">
+      <!-- card 1 -->
+       
+        <div class="projeto-card" data-tech="python mysql">
+            <div class="card-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+            <div class="project-id">projeto_01.js</div>
+            </div>
+            <div class="card-body">
+                <div class="card-img">
+                <img src="patrim.png" alt="Preview do projeto">
+                </div>
+                <div class="card-info">
+                    <h3>Gestão de Patrimônio</h3>
+                    <p>Aplicação desktop para controle de patrimônio.</p>
+                          <div class="tech-tags">
+                          <span>Python</span>
+                            <span>MySQL</span>
+                            <span>PYQT</span> 
+                            </div>
+                    <div class="card-links">
+                        <a href="https://github.com/eduardogm22/PATP-2sem_controle_patrimonio/tree/main/PATP/asset_ctrl" class="btn-project">View_Code.git</a>
                     </div>
                 </div>
+            </div>
+        </div>
+          <!-- card 2 -->
+        <div class="projeto-card" data-tech="java mysql javascript">
+            <div class="card-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
                 </div>
-        </section>
+                <div class="project-id">projeto_02.js</div>
+            </div>
+            <div class="card-body">
+                <div class="card-img">
+                <img src="gestaoPATRIMONIO.png" alt="Preview do projeto">
+                </div>
+                <div class="card-info">
+                    <h3>Controle de Patrimônio</h3>
+                    <p>Aplicação desktop para controle de patrimônio, e um sistema web para informações.</p>
+
+                          <div class="tech-tags">
+                          <span>Java</span>
+                            <span>MySQL</span> 
+                            <span>Javafx</span>
+                            <span>SceneBuilder</span>
+                            <span>JavaScript</span>
+                            <span>Html/Css</span>
+                            </div>
+
+                    <div class="card-links">
+                        <a href="https://github.com/eduardogm22/PATP-3Sem" class="btn-project">View_Code.git</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!-- card 3 -->
+        <div class="projeto-card" data-tech=" java javascript postgresql">
+            <div class="card-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="project-id">projeto_03.js</div>
+            </div>
+            <div class="card-body">
+                <div class="card-img">
+                <img src="gestor.png" alt="Preview do projeto">
+                </div>
+                <div class="card-info">
+                    <h3>Sistema de Gestão de Patrimônio</h3>
+                    <p>Sistema desktop e aplicação web separada para consulta de dados.</p>
+                  
+                          <div class="tech-tags">
+                          <span>Java</span>
+                            <span>PostgreSQL</span> 
+                            <span>Javafx</span>
+                            <span>SceneBuilder</span>
+                            <span>JavaScript</span>
+                            <span>Html/Css</span>
+                            </div>
+                  
+                    <div class="card-links">
+                        <a href="https://github.com/luan-luz/PATP252-GDP" class="btn-project">View_Code.git</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- card 4 -->
+         
+            <div class="projeto-card" data-tech="java mysql javascript">
+            <div class="card-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="project-id">projeto_04.js</div>
+            </div>
+            <div class="card-body">
+                <div class="card-img">
+                <img src="login.png" alt="Preview do projeto">
+                </div>
+                <div class="card-info">
+                    <h3>API Cadastro de Usuários</h3>
+                    <p>Aplicação web para cadastro de usuários.</p>
+
+                          <div class="tech-tags">
+                          <span>Java</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                            <span>Html/Css</span>
+                            </div>
+                    
+                    <div class="card-links">
+                        <a href="https://github.com/EmeLevandoscki/Projeto-Web-API-Java-Spring-Boot" class="btn-project">View_Code.git</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        
+        <!-- card 5 -->
+                     <div class="projeto-card" data-tech="java mysql javascript">
+            <div class="card-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="project-id">projeto_05.js</div>
+            </div>
+            <div class="card-body">
+                <div class="card-img">
+                <img src=" #" alt="Preview do projeto">
+                </div>
+                <div class="card-info">
+                    <h3>Sistema de agendamento de eventos</h3>
+                    <p>em andamento</p>
+
+                          <!--<div class="tech-tags">
+                          <span>Java</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                            <span>Html/Css</span>
+                            </div>-->
+                    
+                    <div class="card-links">
+                        <a href="#" class="btn-project">View_Code.git</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+    </div>
+</section>
 
         <section id="habilidades" class="hidden">
             <h2>Minhas Tech Skills</h2>

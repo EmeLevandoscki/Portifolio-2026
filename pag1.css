@@ -350,15 +350,12 @@ background: linear-gradient(
 .btn-terminal:hover::after {
     opacity: 1;
 }
-
-/* ANIMAÇÃO DE ROLAGEM */
+ 
 
 .hidden1 {   
     border: 0px  0px 50px 50px;
     background: rgba(42, 42, 42, 0.267); 
-}
-
-/* Animação base */
+} 
 @keyframes entradaSuave {
     from {
         opacity: 0;
