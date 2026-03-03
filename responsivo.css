@@ -1,48 +1,42 @@
 /*responsivo da pagina index.html*/ 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
      
     .pag-inicial {
-        max-width: 50px;
         flex-direction: column;
         padding: 20px;
         align-items: center;
     }
-
-    /* 2. Ajuste da Caixa "Sobre Mim" (Efeito Code Editor) */
+ 
     .sobre_mim {
-        max-width: 60%;  
+        width: 95%;  
         margin: 0 auto;
-        font-size: 14px; 
+        font-size: 8px; 
     }
 
     .code-content {
         padding: 15px;
     }
-
-    /* esconde os números das linhas se a tela for muito pequena para ganhar espaço */
+ 
     .line-numbers {
         display: none; 
     }
-
-    /* 3. Títulos e Textos */
+ 
     #hero h1 {
-        font-size: 1.5rem;
+        font-size: 1.0rem;
         line-height: 1.3;
     }
 
     .btn-group {
         display: flex;
-        flex-direction: column; 
-        width: 100%;
+        flex-direction: column;  
+        gap: 10px; 
     }
 
-    .btn {
-        width: 100%;
-        text-align: center;
-        padding: 12px;
+    .btn { 
+        margin-left: 170px;
     }
 
-    /* 4. Ajuste do Fundo Binário */
+ 
     .binary-wrapper {
         opacity: 0.3;  
     }
@@ -50,15 +44,13 @@
     .binary-column {
         font-size: 10px;
     }
-
-    /* 5. Menu de Navegação */
+ 
     .projetos ul {
         justify-content: center;
         padding: 0;
     }
 }
-
-/* Ajustes Extras para Telas Muito Pequenas (até 480px) */
+ 
 @media (max-width: 480px) {
     #hero h1 {
         font-size: 1.2rem;
@@ -72,7 +64,7 @@
 
 
 
-/*responsivo da pagina indexSM*/
+/*responsivo da pagina indexSM//////////////////////////////////////*/
 @media screen and (max-width: 1024px) {
     .terminal-body { flex-direction: column; }
     .journey-step { flex-direction: column; }
