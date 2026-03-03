@@ -10,7 +10,7 @@
 
     /* 2. Ajuste da Caixa "Sobre Mim" (Efeito Code Editor) */
     .sobre_mim {
-        width: 60%;  
+        max-width: 60%;  
         margin: 0 auto;
         font-size: 14px; 
     }
