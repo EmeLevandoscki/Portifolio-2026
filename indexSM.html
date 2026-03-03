@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="projetos.css" >
     <link rel="stylesheet" href="formulaeio.css">
     <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="jornada.css">
 
         <!-- fonte 'Righteous' -->
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
@@ -86,6 +87,7 @@
 <nav class="navbar">
         <a href="#sobre">Sobre</a>
         <a href="#projetos">Projetos</a>
+        <a href="#habilidades">Minhas Habilidades</a>
         <a href="#contato">Contato</a>
     </nav>
     <div class="blob-bg"></div>
@@ -129,7 +131,7 @@
 
   <li>
     <div class="circle">
-      <a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank">
+      <a href="https://www.linkedin.com/in/emelly-levandoscki-b48260231/" target="_blank">
         <i class='bx bxl-linkedin'></i>
       </a>
     </div>
@@ -348,7 +350,7 @@
 <section id="habilidades" class="projects-section">
     <h2 class="section-title-destaque">
         <span class="bracket">&lt;</span>
-        <span class="text-glow">MINHAS_STACKS</span>
+        <span class="text-glow">MINHAS_HABILIDADES</span>
         <span class="bracket">/&gt;</span>
     </h2>
 
@@ -509,23 +511,96 @@
 
 <!--jornada-->
 
+<section class="journey-section">
 
+  <h2 class="section-title-destaque journey-title">
+    <span class="bracket">&lt;</span>
+    <span class="text-glow">MINHA_JORNADA</span>
+    <span class="bracket">/&gt;</span>
+  </h2>
+
+  <div class="journey-roadmap">
+
+    <div class="journey-step top">
+      <div class="step-dot"></div>
+      <div class="step-card">
+        <span class="step-year">2022</span>
+        <h3>Descobrindo a Programação</h3>
+        <p>Primeiro contato com o universo do desenvolvimento.</p>
+      </div>
+    </div>
+
+    <div class="journey-step bottom">
+      <div class="step-dot"></div>
+      <div class="step-card">
+        <span class="step-year">2024/1</span>
+        <h3>Início da Graduação em ADS</h3>
+        <p>Aprendizado em fundamentos de computação e projetos práticos.</p>
+      </div>
+    </div>
+
+    <div class="journey-step top">
+      <div class="step-dot"></div>
+      <div class="step-card">
+        <span class="step-year">2024/2</span>
+        <h3>Projeto Aprovado: Estoque com Python</h3>
+        <p>Projeto do primeiro semestre 2024/1   aprovado na MIC.</p>
+      </div>
+    </div>
+
+    <div class="journey-step bottom">
+      <div class="step-dot"></div>
+      <div class="step-card">
+        <span class="step-year">2025/1</span>
+        <h3>Projeto Aprovado: Patrimônio com Python</h3>
+        <p>Projeto do segundo semestre do 2024/2 aprovado na MIC.</p>
+      </div>
+    </div>
+
+    <div class="journey-step top">
+      <div class="step-dot"></div>
+      <div class="step-card">
+        <span class="step-year">2025/2</span>
+        <h3>Projeto Aprovado: Patrimônio com java</h3>
+        <p>Projeto do primeiro semestre 2025/1 aprovado na MIC.</p>
+      </div>
+    </div>
+
+    <div class="journey-step bottom">
+      <div class="step-dot highlight"></div>
+      <div class="step-card highlight">
+        <span class="step-year">Hoje 2026/1</span>
+        <h3>Evolução Contínua</h3>
+        <p>Desenvolvendo projetos completos e aprimorando práticas avançadas.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
 
 <!-- contato-->
-</section>
+</section> 
 <section id="contato" class="contact-section hidden">
+
+ <h2 class="section-title-destaque">
+  <span class="bracket">&lt;</span>
+  <span class="text-glow">CONTATO</span>
+  <span class="bracket">/&gt;</span>
+</h2>
+
   <div class="form-container">
+    
 
     <header class="form-header">
       <h2>Vamos conversar!</h2>
       <p>Descreva sua duvida e eu entro em contato o mais rápido possível.</p>
     </header>
 
-    <form 
-      action="https://formsubmit.co/emylevandoscki@gmail.com" 
-      method="POST" 
-      class="contact-form"
-    >
+<form action="https://formsubmit.co/emylevandoscki@gmail.com" method="POST">
+    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <button type="submit">Enviar</button>
+</form>
 
       <!-- configs formsubmit -->
       <input type="hidden" name="_subject" value="Novo contato pelo portfólio">
@@ -558,7 +633,7 @@
 
       <button type="submit" class="btn-send">
         Enviar mensagem 🚀
-      </button>
+      </button> 
 
       <p class="form-note">
         🔒 Seus dados não serão compartilhados.
@@ -567,8 +642,20 @@
     </form>
   </div>
 </section>
+
+<footer>
+    <p>&copy; 2026 - Criado por 
+        <a href="https://github.com/EmeLevandoscki" target="_blank" class="github-link">
+            @EmeLevandoscki <i class="fab fa-github"></i>
+        </a>
+    </p>
+</footer>
+
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+
+      
+    </script>
 </body>
 </html>

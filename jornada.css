@@ -1,0 +1,119 @@
+h3{
+    color: #0088ff;
+}
+
+.journey-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column; /* força título no topo */
+  align-items: center;
+}
+
+.journey-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px; /* espaço entre título e linha do tempo */
+  font-size: 2em;
+}
+
+/* roadmap horizontal zig-zag */
+.journey-roadmap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.journey-roadmap::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #00f0ff, #0088ff);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+/* cards alternando acima e abaixo */
+.journey-step {
+  position: relative;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.journey-step.top {
+  margin-bottom: 120px;
+}
+
+.journey-step.bottom {
+  margin-top: 120px;
+}
+
+.step-dot {
+  width: 16px;
+  height: 16px;
+  background: #0d1117;
+  border: 3px solid #00f0ff;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 8px #00f0ff;
+  margin-bottom: 10px;
+}
+
+.step-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 18px;
+  max-width: 180px;
+  text-align: center;
+  z-index: 1;
+}
+
+.step-card.highlight {
+  border-color: #00f0ff;
+  box-shadow: 0 10px 30px rgba(0,240,255,0.2);
+}
+
+/* responsivo */
+@media (max-width: 900px) {
+  .journey-roadmap {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .journey-roadmap::before {
+    width: 3px;
+    height: 100%;
+    left: 20px;
+    top: 0;
+    transform: none;
+  }
+
+  .journey-step {
+    width: 100%;
+    margin: 40px 0;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .step-dot {
+    margin: 0;
+  }
+
+  .step-card {
+    margin-left: 40px;
+    text-align: left;
+    max-width: 90%;
+  }
+}

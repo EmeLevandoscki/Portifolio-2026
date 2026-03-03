@@ -208,19 +208,3 @@
 
 /*carde liguagens*/
 
-.tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 12px 0 16px;
-}
-
-.tech-tags span {
-    background: rgba(0, 255, 170, 0.1);
-    border: 1px solid rgba(0, 255, 170, 0.4);
-    color: #00ffaa;
-    padding: 4px 10px;
-    font-size: 12px;
-    border-radius: 6px;
-    font-weight: 500;
-}

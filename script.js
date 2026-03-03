@@ -57,3 +57,21 @@ botoes.forEach(botao => {
 
     });
 }); 
+
+
+//nav bar
+ 
+const navLinks = document.querySelectorAll(".navbar a");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", function(e) {
+        e.preventDefault(); // impede o salto instantâneo
+        const targetId = this.getAttribute("href").substring(1); // pega o id sem #
+        const targetSection = document.getElementById(targetId);
+
+        targetSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+});

@@ -1,6 +1,56 @@
  
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
  
+/* Estado inicial */  .hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Quando entra na tela */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/*footer*/
+
+footer {
+    background: #1c1c1c;
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center; 
+    position: relative;
+    z-index: 2; 
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #94a3b8; 
+    margin: 0;
+}
+
+.github-link {
+    color: #94a3b8;
+    text-decoration: none; 
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.github-link:hover {
+    color: #fff; 
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.github-link i {
+    font-size: 1.2rem;
+}
+
+
+
 
 :root {
     --bg-color: #0f172a;
@@ -75,6 +125,10 @@ body {
 }
 
 /* LINKS */
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar a {
     position: relative;
     color: var(--text-color);
@@ -105,6 +159,16 @@ body {
 
 .navbar a:hover::after {
     width: 100%;
+}
+
+/* underline ativo */
+.navbar a.active::after {
+    width: 100%;
+}
+
+/* muda a cor do link ativo */
+.navbar a.active {
+    color: #fff;
 }
 
 /* CONTAINER DA JANELA */
