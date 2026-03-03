@@ -75,3 +75,32 @@ navLinks.forEach(link => {
         });
     });
 });
+
+
+//animacao jornada
+
+const steps = document.querySelectorAll('.journey-step');
+
+const journeyObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+steps.forEach(step => journeyObserver.observe(step));
+
+
+//animacao de entrada das habilidades
+const projectCards = document.querySelectorAll('.projeto-card');
+
+const projectObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+projectCards.forEach(card => projectObserver.observe(card));

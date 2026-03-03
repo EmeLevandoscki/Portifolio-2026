@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="formulaeio.css">
     <link rel="stylesheet" href="skills.css">
     <link rel="stylesheet" href="jornada.css">
+    <link rel="stylesheet" href="responsivo.css">
 
         <!-- fonte 'Righteous' -->
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
@@ -155,8 +156,10 @@
 </ul>
               </div>
 
-        <div class="btn-group"> 
-            <a href="#" class="btn-terminal">curriculo.pdf</a>
+        <div class="btn-group">  
+             <a href="Curriculo_Emelly_Levandoscki.pdf" class="btn-terminal" download="Curriculo_Emelly_Levandoscki.pdf">
+    currículo.pdf
+</a>
         </div>
     </div>
 
@@ -583,24 +586,20 @@
 </section> 
 <section id="contato" class="contact-section hidden">
 
- <h2 class="section-title-destaque">
-  <span class="bracket">&lt;</span>
-  <span class="text-glow">CONTATO</span>
-  <span class="bracket">/&gt;</span>
-</h2>
+  <h2 class="section-title-destaque">
+    <span class="bracket">&lt;</span>
+    <span class="text-glow">CONTATO</span>
+    <span class="bracket">/&gt;</span>
+  </h2>
 
   <div class="form-container">
-    
 
     <header class="form-header">
       <h2>Vamos conversar!</h2>
-      <p>Descreva sua duvida e eu entro em contato o mais rápido possível.</p>
+      <p>Descreva sua dúvida e eu entro em contato o mais rápido possível.</p>
     </header>
 
-<form action="https://formsubmit.co/emylevandoscki@gmail.com" method="POST">
-    <input type="email" name="email" placeholder="Seu e-mail" required>
-    <button type="submit">Enviar</button>
-</form>
+    <form id="contactForm"> 
 
       <!-- configs formsubmit -->
       <input type="hidden" name="_subject" value="Novo contato pelo portfólio">
@@ -626,18 +625,14 @@
 
         <div class="field full">
           <textarea name="mensagem" rows="5" required></textarea>
-          <label>Mande uma mensagem ou uma sugestão </label>
+          <label>Mande uma mensagem ou uma sugestão</label>
         </div>
 
       </div>
 
-      <button type="submit" class="btn-send">
-        Enviar mensagem 🚀
-      </button> 
+      <button type="submit" class="btn-send">Enviar mensagem 🚀</button> 
 
-      <p class="form-note">
-        🔒 Seus dados não serão compartilhados.
-      </p>
+      <p class="form-note" id="formNote">🔒 Seus dados não serão compartilhados.</p>
 
     </form>
   </div>
