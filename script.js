@@ -104,3 +104,21 @@ const projectObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 projectCards.forEach(card => projectObserver.observe(card));
+
+
+///////////////////////formulario de contato
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // impede reload
+    const form = e.target;
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+    })
+    .then(() => {
+        document.getElementById('formNote').textContent = "✅ Mensagem enviada com sucesso!";
+        form.reset();
+    })
+    .catch(() => {
+        document.getElementById('formNote').textContent = "❌ Ocorreu um erro, tente novamente.";
+    });
+});
