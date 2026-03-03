@@ -71,22 +71,25 @@
 
 
 
-@media screen and (max-width: 340px) {
+@media screen and (min-width: 350px) and (max-width: 390px) {
+ 
+ 
     .pag-inicial {
-        padding: 10px;
-        overflow-x: hidden;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
     }
 
     .sobre_mim {
         width: 100% !important;
-        font-size: 11px !important; 
-        border-radius: 4px;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
 
     .code-content {
-        padding: 10px !important;
-        display: flex;
-        flex-direction: column;
+        padding: 8px !important;
     }
 
     .line-numbers {
@@ -94,63 +97,39 @@
     }
 
     #hero h1 { 
-        font-size: 1.1rem !important;
-        line-height: 1.2;
-        word-wrap: break-word;
+        font-size: 0.95rem !important;
+        margin-top: 0;
     }
 
     #hero p {
-        font-size: 12px;
-        line-height: 1.4;
-    }
-
-    .code-tag{
-        margin-top: -100px;
-    }
-
-    .code-tag, .code-string, .code-var {
-        
-        font-size: 11px !important;
+        font-size: 11px;
+        margin-bottom: 8px;
     }
 
     .btn-group {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+        display: flex; 
+        justify-content: space-between;  
         width: 100%;
-        margin-left: 0 !important;
-        align-items: center;
+        margin-left: -60px !important;
     }
 
     .btn {
-        width: 90%;
+        flex: 1;
+        font-size: 8.5px !important;
+        padding: 6px 2px !important;
         text-align: center;
-        font-size: 11px !important;
-        padding: 12px 5px !important;
-        margin: 0 !important;
-        display: block;
+        white-space: nowrap;
+        min-width: 90px;
     }
 
     .binary-wrapper {
-        opacity: 0.15;
-    }
-
-    .binary-column {
-        font-size: 8px;
-        letter-spacing: 1px;
+        opacity: 0.1;
     }
 
     .projetos ul {
-        display: flex;
-        justify-content: space-around;
-        padding: 0;
-    }
-
-    .projetos a {
-        font-size: 12px;
+        gap: 8px;
     }
 }
-
 
 
 
