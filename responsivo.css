@@ -75,11 +75,11 @@
  
  
     .pag-inicial {
-        padding: 5px;
+        padding: 15px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        height: auto;
+        height: 100px;
     }
 
     .sobre_mim {
@@ -110,7 +110,8 @@
         display: flex; 
         justify-content: space-between;  
         width: 100%;
-        margin-left: -60px !important;
+        margin-left: -50px !important;
+        margin-top: -10px !important;
     }
 
     .btn {
@@ -135,85 +136,73 @@
 
 
 /*responsivo da pagina indexSM//////////////////////////////////////*/
-@media screen and (max-width: 340px) {
-    .pag-inicial {
-        padding: 10px;
-        overflow-x: hidden;
+#sobre {
+        padding: 5px;
     }
 
-    .sobre_mim {
-        width: 100% !important;
-        font-size: 11px !important; 
-        border-radius: 4px;
+    .terminal-window {
+        padding: 15px !important;
+        height: auto !important;
+        min-height: 200px !important;
     }
 
-    .code-content {
-        padding: 10px !important;
+    .sobre-container {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        padding: 10px !important;
+        gap: 10px;
     }
 
-    .line-numbers {
-        display: none !important;
+    .foto-perfil img {
+        width: 70px !important;
+        height: 70px !important;
+        margin-top: 0;
     }
 
-    #hero h1 { 
-        font-size: 1.1rem !important;
-        line-height: 1.2;
-        word-wrap: break-word;
+    .sobre-texto {
+        width: 100%;
+        text-align: center;
+        font-size: 11px;
     }
 
-    #hero p {
-        font-size: 12px;
-        line-height: 1.4;
-    }
-
-    .code-tag{
-        margin-top: -100px;
-    }
-
-    .code-tag, .code-string, .code-var {
-        
+    .sobre-texto .line {
         font-size: 11px !important;
+        line-height: 1.3;
+        margin-bottom: 8px;
+    }
+
+    .comment {
+        font-size: 10px;
+        margin: 5px 0;
+    }
+
+    .eclipse ul {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .circle {
+        width: 35px;
+        height: 35px;
+    }
+
+    .circle i {
+        font-size: 18px;
     }
 
     .btn-group {
+         font-size: 8px;
         display: flex;
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
-        margin-left: 0 !important;
-        align-items: center;
+        justify-content: center;
+        width: 100% !important;
+        margin-left: 70px !important;
     }
 
-    .btn {
-        width: 90%;
-        text-align: center;
-        font-size: 11px !important;
-        padding: 12px 5px !important;
-        margin: 0 !important;
-        display: block;
-    }
-
-    .binary-wrapper {
-        opacity: 0.15;
-    }
-
-    .binary-column {
-        font-size: 8px;
-        letter-spacing: 1px;
-    }
-
-    .projetos ul {
-        display: flex;
-        justify-content: space-around;
-        padding: 0;
-    }
-
-    .projetos a {
-        font-size: 12px;
-    }
-}
+  
 
 
 @media screen and (max-width: 340px) {
