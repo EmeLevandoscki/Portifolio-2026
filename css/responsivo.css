@@ -455,12 +455,11 @@
     align-items: center;
     justify-content: center;
     transition: var(--transition);
-    border: 1px solid rgba(0, 245, 160, 0.2);
+    border: none;
+    background: transparent;
   }
 
   .circle:hover {
-    border-color: var(--accent);
-    background: rgba(0, 245, 160, 0.1);
     transform: translateY(-2px);
   }
 
