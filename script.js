@@ -106,6 +106,47 @@ const projectObserver = new IntersectionObserver(entries => {
 projectCards.forEach(card => projectObserver.observe(card));
 
 
+// ===== MODAL =====
+document.querySelectorAll('.btn-saiba-mais').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.getElementById(btn.dataset.modal).classList.add('active');
+    });
+});
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', e => {
+        if (e.target === overlay) overlay.classList.remove('active');
+    });
+});
+document.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.getElementById(btn.dataset.modal).classList.remove('active');
+    });
+});
+
+// ===== FLIP CARD =====
+document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+        if (!e.target.closest('a') && !e.target.closest('.btn-flip-back')) {
+            this.classList.add('flipped');
+        }
+    });
+});
+document.querySelectorAll('.btn-flip-back').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.closest('.flip-card').classList.remove('flipped');
+    });
+});
+
+// ===== INLINE EXPAND =====
+document.querySelectorAll('.btn-expand').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const target = document.getElementById(this.dataset.target);
+        const isOpen = target.classList.toggle('open');
+        this.textContent = isOpen ? '− detalhes' : '+ detalhes';
+    });
+});
+
 ///////////////////////formulario de contato
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault(); // impede reload

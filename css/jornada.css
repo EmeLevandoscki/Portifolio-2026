@@ -6,7 +6,7 @@ h3{
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 120px 40px;
   display: flex;
   flex-direction: column; /* força título no topo */
   align-items: center;

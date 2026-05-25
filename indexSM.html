@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio | Emelly Levandoscki</title>
-    <link rel="stylesheet" href="styleSM.css">
-    <link rel="stylesheet" href="pag1.css" >
-    <link rel="stylesheet" href="projetos.css" >
-    <link rel="stylesheet" href="formulaeio.css">
-    <link rel="stylesheet" href="skills.css">
-    <link rel="stylesheet" href="jornada.css">
-    <link rel="stylesheet" href="responsivo.css">
+    <link rel="stylesheet" href="css/styleSM.css">
+    <link rel="stylesheet" href="css/pag1.css" >
+    <link rel="stylesheet" href="css/projetos.css" >
+    <link rel="stylesheet" href="css/formulaeio.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/jornada.css">
+    <link rel="stylesheet" href="css/responsivo.css">
 
-    <link rel="icon" href="icone.png" type="image/x-icon">
+    <link rel="icon" href="img/icone.png" type="image/x-icon">
 
         <!-- fonte 'Righteous' -->
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
@@ -110,7 +110,7 @@
                 <div class="terminal-body sobre-container">
 
     <div class="foto-perfil">
-        <img src="foto.jpg" alt="Foto de perfil">
+        <img src="img/foto.jpg" alt="Foto de perfil">
     </div>
 
     <div class="sobre-texto">
@@ -172,24 +172,41 @@
 
 <section id="projetos" class="projects-section">
     
-    <h2 class="section-title-destaque">
-        <span class="bracket">&lt;</span>
-        <span class="text-glow">PROJETOS_EM_DESTAQUE</span>
-        <span class="bracket">/&gt;</span>
-    </h2>
-    <!-- filtro de projetos -->
+    <div class="projetos-terminal">
+        <div class="projetos-terminal-header">
+            <div class="dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <span class="projetos-terminal-title">
+                <span class="title-dim">/* === </span><span class="title-main">PROJETOS_EM_DESTAQUE</span><span class="title-dim"> === */</span>
+            </span>
+            <span class="projetos-terminal-tag">6 arquivos</span>
+        </div>
+        <div class="projetos-terminal-body">
 
-    <div class="filtro-projetos">
-    <button class="btn-filtro ativo" data-filter="all">Todos</button>
-    <button class="btn-filtro" data-filter="java">Java</button>
-    <button class="btn-filtro" data-filter="python">Python</button>
-    <button class="btn-filtro" data-filter="php">PHP</button>
-    <button class="btn-filtro" data-filter="mysql">MySql</button>
-    <button class="btn-filtro" data-filter="postgresql">PostgreSQL</button>
-    <button class="btn-filtro" data-filter="javascript">JavaScript</button>
-</div>
+            <p class="projetos-stats">// 6 projetos &nbsp;·&nbsp; 4 aprovados &nbsp;·&nbsp; 1 em andamento &nbsp;·&nbsp; 1 freelance</p>
 
-    <div class="projeto-grid">
+            <!-- filtro de projetos -->
+            <div class="filtro-bloco">
+                <div class="filtro-linha-cmd">
+                    <span class="cmd-dollar">$</span> filtrar por: <span class="cmd-cursor"></span>
+                </div>
+                <div class="filtro-projetos">
+                    <button class="btn-filtro ativo" data-filter="all">Todos</button>
+                    <button class="btn-filtro" data-filter="java">Java</button>
+                    <button class="btn-filtro" data-filter="python">Python</button>
+                    <button class="btn-filtro" data-filter="php">PHP</button>
+                    <button class="btn-filtro" data-filter="mysql">MySql</button>
+                    <button class="btn-filtro" data-filter="postgresql">PostgreSQL</button>
+                    <button class="btn-filtro" data-filter="javascript">JavaScript</button>
+                    <button class="btn-filtro" data-filter="lua">Lua</button>
+                    <button class="btn-filtro" data-filter="autohotkey">AutoHotkey</button>
+                </div>
+            </div>
+
+            <div class="projeto-grid">
       <!-- card 1 -->
        
         <div class="projeto-card" data-tech="python mysql">
@@ -199,23 +216,26 @@
                     <span class="dot yellow"></span>
                     <span class="dot green"></span>
                 </div>
-            <div class="project-id">projeto_01.js</div>
+                <div class="project-id">projeto_01.js</div>
+                <span class="status-badge status-aprovado">● APROVADO</span>
             </div>
             <div class="card-body">
                 <div class="card-img">
-                <img src="patrim.png" alt="Preview do projeto">
+                <img src="img/patrim.png" alt="Preview do projeto">
                 </div>
                 <div class="card-info">
                     <h3>Gestão de Patrimônio</h3>
                     <p>Aplicação desktop para controle de patrimônio.</p>
-                          <div class="tech-tags">
-                          <span>Python</span>
-                            <span>MySQL</span>
-                            <span>PYQT</span> 
-                            </div>
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>MySQL</span>
+                        <span>PYQT</span>
+                    </div>
                     <div class="card-links">
                         <a href="https://github.com/eduardogm22/PATP-2sem_controle_patrimonio/tree/main/PATP/asset_ctrl" class="btn-project">View_Code.git</a>
+                        <button class="btn-saiba-mais" data-modal="modal-p1">README.md</button>
                     </div>
+                    <p class="flip-hint">// clique em README.md para ver detalhes</p>
                 </div>
             </div>
         </div>
@@ -228,27 +248,28 @@
                     <span class="dot green"></span>
                 </div>
                 <div class="project-id">projeto_02.js</div>
+                <span class="status-badge status-aprovado">● APROVADO</span>
             </div>
             <div class="card-body">
                 <div class="card-img">
-                <img src="gestaoPATRIMONIO.png" alt="Preview do projeto">
+                    <img src="img/gestaoPATRIMONIO.png" alt="Preview do projeto">
                 </div>
                 <div class="card-info">
                     <h3>Controle de Patrimônio</h3>
                     <p>Aplicação desktop para controle de patrimônio, e um sistema web para informações.</p>
-
-                          <div class="tech-tags">
-                          <span>Java</span>
-                            <span>MySQL</span> 
-                            <span>Javafx</span>
-                            <span>SceneBuilder</span>
-                            <span>JavaScript</span>
-                            <span>Html/Css</span>
-                            </div>
-
+                    <div class="tech-tags">
+                        <span>Java</span>
+                        <span>MySQL</span>
+                        <span>Javafx</span>
+                        <span>SceneBuilder</span>
+                        <span>JavaScript</span>
+                        <span>Html/Css</span>
+                    </div>
                     <div class="card-links">
                         <a href="https://github.com/eduardogm22/PATP-3Sem" class="btn-project">View_Code.git</a>
+                        <button class="btn-saiba-mais" data-modal="modal-p2">README.md</button>
                     </div>
+                    <p class="flip-hint">// clique em README.md para ver detalhes</p>
                 </div>
             </div>
         </div>
@@ -261,33 +282,33 @@
                     <span class="dot green"></span>
                 </div>
                 <div class="project-id">projeto_03.js</div>
+                <span class="status-badge status-aprovado">● APROVADO</span>
             </div>
             <div class="card-body">
                 <div class="card-img">
-                <img src="gestor.png" alt="Preview do projeto">
+                    <img src="img/gestor.png" alt="Preview do projeto">
                 </div>
                 <div class="card-info">
                     <h3>Sistema de Gestão de Patrimônio</h3>
                     <p>Sistema desktop e aplicação web separada para consulta de dados.</p>
-                  
-                          <div class="tech-tags">
-                          <span>Java</span>
-                            <span>PostgreSQL</span> 
-                            <span>Javafx</span>
-                            <span>SceneBuilder</span>
-                            <span>JavaScript</span>
-                            <span>Html/Css</span>
-                            </div>
-                  
+                    <div class="tech-tags">
+                        <span>Java</span>
+                        <span>PostgreSQL</span>
+                        <span>Javafx</span>
+                        <span>SceneBuilder</span>
+                        <span>JavaScript</span>
+                        <span>Html/Css</span>
+                    </div>
                     <div class="card-links">
                         <a href="https://github.com/luan-luz/PATP252-GDP" class="btn-project">View_Code.git</a>
+                        <button class="btn-saiba-mais" data-modal="modal-p3">README.md</button>
                     </div>
+                    <p class="flip-hint">// clique em README.md para ver detalhes</p>
                 </div>
             </div>
         </div>
         <!-- card 4 -->
-         
-            <div class="projeto-card" data-tech="java mysql javascript">
+        <div class="projeto-card" data-tech="java mysql javascript">
             <div class="card-header">
                 <div class="dots">
                     <span class="dot red"></span>
@@ -295,10 +316,11 @@
                     <span class="dot green"></span>
                 </div>
                 <div class="project-id">projeto_04.js</div>
+                <span class="status-badge status-concluido">● CONCLUÍDO</span>
             </div>
             <div class="card-body">
                 <div class="card-img">
-                <img src="login.png" alt="Preview do projeto">
+                <img src="img/login.png" alt="Preview do projeto">
                 </div>
                 <div class="card-info">
                     <h3>API Cadastro de Usuários</h3>
@@ -313,13 +335,15 @@
                     
                     <div class="card-links">
                         <a href="https://github.com/EmeLevandoscki/Projeto-Web-API-Java-Spring-Boot" class="btn-project">View_Code.git</a>
+                        <button class="btn-saiba-mais" data-modal="modal-p4">README.md</button>
                     </div>
-                </div> 
+                    <p class="flip-hint">// clique em README.md para ver detalhes</p>
+                </div>
             </div>
         </div>
-        
+
         <!-- card 5 -->
-                     <div class="projeto-card" data-tech="php mysql javascript">
+        <div class="projeto-card" data-tech="lua autohotkey">
             <div class="card-header">
                 <div class="dots">
                     <span class="dot red"></span>
@@ -327,39 +351,85 @@
                     <span class="dot green"></span>
                 </div>
                 <div class="project-id">projeto_05.js</div>
+                <span class="status-badge status-freelance">● FREELANCE</span>
             </div>
             <div class="card-body">
                 <div class="card-img">
-                <img src=" #" alt="Preview do projeto">
+                    <img src="img/crystal.jpg" alt="Preview do projeto">
+                </div>
+                <div class="card-info">
+                    <h3>Macro — Crystal of Atlan</h3>
+                    <p>Macro para automação de ações no jogo Crystal of Atlan, disponível em duas versões.</p>
+                    <div class="tech-tags">
+                        <span>Lua</span>
+                        <span>AutoHotkey</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/EmeLevandoscki/Macro-cristal-of-atlan" target="_blank" class="btn-project">View_Code.git</a>
+                        <button class="btn-saiba-mais" data-modal="modal-p6">README.md</button>
+                    </div>
+                    <p class="flip-hint">// clique em README.md para ver detalhes</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- card 6 -->
+        <div class="projeto-card" data-tech="php mysql javascript">
+            <div class="card-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="project-id">projeto_06.js</div>
+                <span class="status-badge status-andamento">● EM ANDAMENTO</span>
+            </div>
+            <div class="card-body">
+                <div class="card-img">
+                    <img src="#" alt="Preview do projeto">
                 </div>
                 <div class="card-info">
                     <h3>Sistema de eventos</h3>
                     <p>em andamento</p>
-
-                          <div class="tech-tags">
-                          <span>PHP</span>
-                            <span>JavaScript</span>
-                            <span>Html/Css</span>
-                            </div>
-                    
+                    <div class="tech-tags">
+                        <span>PHP</span>
+                        <span>JavaScript</span>
+                        <span>Html/Css</span>
+                    </div>
                     <div class="card-links">
                         <a href="#" class="btn-project">View_Code.git</a>
+                        <button class="btn-saiba-mais" data-modal="modal-p5">README.md</button>
                     </div>
-                </div> 
+                    <p class="flip-hint">// clique em README.md para ver detalhes</p>
+                </div>
             </div>
         </div>
 
-    </div>
+            </div><!-- fim projeto-grid -->
+        </div><!-- fim projetos-terminal-body -->
+    </div><!-- fim projetos-terminal -->
+
 </section>
 
 <section id="habilidades" class="projects-section">
-    <h2 class="section-title-destaque">
-        <span class="bracket">&lt;</span>
-        <span class="text-glow">MINHAS_HABILIDADES</span>
-        <span class="bracket">/&gt;</span>
-    </h2>
 
-    <div class="projeto-grid">
+    <div class="projetos-terminal">
+        <div class="projetos-terminal-header">
+            <div class="dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <span class="projetos-terminal-title">
+                <span class="title-dim">/* === </span><span class="title-main">MINHAS_HABILIDADES</span><span class="title-dim"> === */</span>
+            </span>
+            <span class="projetos-terminal-tag">5 categorias</span>
+        </div>
+        <div class="projetos-terminal-body">
+
+            <p class="projetos-stats">// back-end &nbsp;·&nbsp; front-end &nbsp;·&nbsp; banco de dados &nbsp;·&nbsp; frameworks &nbsp;·&nbsp; outros</p>
+
+            <div class="projeto-grid">
         
 
 
@@ -377,17 +447,25 @@
                 <br>
                 <div class="logo-grid">
 
-                    <div class="tech-item">
+                    <div class="tech-item" data-tooltip="Linguagem versátil para scripts, automação e web">
                         <i class="devicon-python-plain colored"></i>
                         <span>Python</span>
                     </div>
-                    <div class="tech-item">
+                    <div class="tech-item" data-tooltip="Linguagem robusta para sistemas e APIs enterprise">
                         <i class="devicon-java-plain colored"></i>
                         <span>Java</span>
                     </div>
-                    <div class="tech-item">
+                    <div class="tech-item" data-tooltip="Linguagem server-side para desenvolvimento web">
                         <i class="devicon-php-plain colored"></i>
                         <span>PHP</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Linguagem moderna da JVM, ideal para Android">
+                        <i class="devicon-kotlin-plain colored"></i>
+                        <span>Kotlin</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Linguagem da Apple para apps iOS e macOS">
+                        <i class="devicon-swift-plain colored"></i>
+                        <span>Swift</span>
                     </div>
 
                 </div>
@@ -407,11 +485,11 @@
                 <h3>Banco de Dados</h3>
                 <br>
                 <div class="logo-grid">
-                    <div class="tech-item">
+                    <div class="tech-item" data-tooltip="Banco relacional open-source amplamente usado">
                         <i class="devicon-mysql-plain colored"></i>
                         <span>MySQL</span>
                     </div>
-                    <div class="tech-item">
+                    <div class="tech-item" data-tooltip="Banco relacional avançado com suporte a JSON e extensões">
                         <i class="devicon-postgresql-plain colored"></i>
                         <span>PostgreSQL</span>
                     </div>
@@ -436,15 +514,15 @@
                 <h3>Front-end</h3>
                 <br>
                 <div class="logo-grid">
-                    <div class="tech-item">
+                    <div class="tech-item" data-tooltip="Estrutura e semântica de páginas web">
                         <i class="devicon-html5-plain colored"></i>
                         <span>HTML5</span>
                     </div>
-                    <div class="tech-item">
+                    <div class="tech-item" data-tooltip="Estilização, animações e layouts responsivos">
                         <i class="devicon-css3-plain colored"></i>
                         <span>CSS3</span>
                     </div>
-                    <div class="tech-item">
+                    <div class="tech-item" data-tooltip="Interatividade e dinamismo no navegador">
                         <i class="devicon-javascript-plain colored"></i>
                         <span>JavaScript</span>
                     </div>
@@ -475,11 +553,81 @@
                         <span>Tailwind</span>
                     </div>-->
                     
-                    <div class="tech-item">
+                    <div class="tech-item" data-tooltip="Framework CSS para layouts responsivos rápidos">
                         <i class="devicon-bootstrap-plain colored"></i>
                         <span>Bootstrap</span>
                     </div>
+                    <div class="tech-item" data-tooltip="SDK do Google para apps mobile multiplataforma">
+                        <i class="devicon-flutter-plain colored"></i>
+                        <span>Flutter</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Kotlin Multiplatform: código compartilhado entre iOS e Android">
+                        <i class="devicon-kotlin-plain colored"></i>
+                        <span>KMP</span>
+                    </div>
 
+                </div>
+                <br>
+                <p style="font-family:'Roboto Mono',monospace; color:#444; font-size:0.75rem; margin-bottom:8px;">// bibliotecas</p>
+                <div class="logo-grid">
+                    <div class="tech-item" data-tooltip="Biblioteca Python para interfaces gráficas desktop com Qt">
+                        <i class="devicon-qt-original colored"></i>
+                        <span>PyQT</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Editor visual drag-and-drop para interfaces JavaFX">
+                        <i class="devicon-java-plain colored"></i>
+                        <span>SceneBuilder</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="projeto-card">
+            <div class="card-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="project-id">ia.log</div>
+            </div>
+            <div class="card-body logo-body">
+                <h3>Inteligência Artificial</h3>
+                <br>
+                <p style="font-family:'Roboto Mono',monospace; color:#444; font-size:0.75rem; margin-bottom:8px;">// ferramentas</p>
+                <div class="logo-grid">
+                    <div class="tech-item" data-tooltip="Assistente de IA da OpenAI para geração de texto e código">
+                        <i class='bx bx-bot' style="color: #10a37f; font-size: 2rem;"></i>
+                        <span>ChatGPT</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Assistente de IA da Anthropic com foco em segurança">
+                        <i class='bx bx-brain' style="color: #cc785c; font-size: 2rem;"></i>
+                        <span>Claude</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Modelo multimodal de IA do Google">
+                        <i class='bx bx-diamond' style="color: #4285f4; font-size: 2rem;"></i>
+                        <span>Gemini</span>
+                    </div>
+                </div>
+                <br>
+                <p style="font-family:'Roboto Mono',monospace; color:#444; font-size:0.75rem; margin-bottom:8px;">// apis & ml</p>
+                <div class="logo-grid">
+                    <div class="tech-item" data-tooltip="API para integrar modelos GPT em aplicações próprias">
+                        <i class='bx bx-plug' style="color: #10a37f; font-size: 2rem;"></i>
+                        <span>OpenAI API</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Framework de machine learning open-source do Google">
+                        <i class="devicon-tensorflow-original colored"></i>
+                        <span>TensorFlow</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Framework de deep learning flexível da Meta">
+                        <i class="devicon-pytorch-original colored"></i>
+                        <span>PyTorch</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Arte de formular instruções eficazes para modelos de IA">
+                        <i class='bx bx-message-square-edit' style="color: #00f7ff; font-size: 2rem;"></i>
+                        <span>Prompt Eng.</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -495,24 +643,57 @@
             </div>
             <div class="card-body logo-body">
                 <h3>Outros</h3>
-                <br> 
+                <br>
                 <div class="logo-grid">
-                    <div class="tech-item">
+                    <div class="tech-item" data-tooltip="Ferramenta para testar e documentar APIs">
                         <i class="devicon-postman-plain colored"></i>
                         <span>Postman</span>
                     </div>
-                    <div class="tech-item">
+                    <div class="tech-item" data-tooltip="Plataforma de versionamento e colaboração em código">
                         <i class="devicon-github-original" style="color: #fff;"></i>
                         <span>GitHub</span>
                     </div>
-                    <!--<div class="tech-item">
+                    <div class="tech-item" data-tooltip="Linguagem leve de script para games e automação">
+                        <i class="devicon-lua-plain colored"></i>
+                        <span>Lua</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Automação de tarefas e criação de macros no Windows">
+                        <i class='bx bx-code-alt' style="color: #00f7ff; font-size: 2rem;"></i>
+                        <span>AutoHotkey</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Framework Java para interfaces gráficas desktop ricas">
+                        <i class="devicon-java-plain colored"></i>
+                        <span>JavaFX</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Framework Java para APIs REST e microsserviços">
+                        <i class="devicon-spring-plain colored"></i>
+                        <span>Spring Boot</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Padrão de comunicação entre sistemas via HTTP">
+                        <i class='bx bx-data' style="color: #00f7ff; font-size: 2rem;"></i>
+                        <span>API REST</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Tecnologia de registro distribuído, imutável e descentralizado">
+                        <i class='bx bx-link-alt' style="color: #f7931a; font-size: 2rem;"></i>
+                        <span>Blockchain</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Containerização de aplicações para deploy consistente">
                         <i class="devicon-docker-plain colored"></i>
-                        <span>Docker</span>-->
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-item" data-tooltip="Ferramenta de gerenciamento de tarefas e projetos em kanban">
+                        <i class="devicon-trello-plain colored"></i>
+                        <span>Trello</span>
                     </div>
                 </div>
             </div>
         </div>
-</div>
+
+            </div><!-- fim projeto-grid -->
+        </div><!-- fim projetos-terminal-body -->
+    </div><!-- fim projetos-terminal -->
+
+</section>
 
 <!--jornada-->
 
@@ -591,7 +772,7 @@
 
     <header class="form-header">
       <h2>Vamos conversar!</h2>
-      <p>Descreva sua duvida e eu entro em contato o mais rápido possível.</p>
+      <p>Descreva sua dúvida e eu entro em contato o mais rápido possível.</p>
     </header>
 
     <form 
@@ -650,6 +831,203 @@
 </footer>
 
     </main>
+
+    <!-- Modal projeto 01 -->
+    <div class="modal-overlay" id="modal-p1">
+        <div class="modal-terminal">
+            <div class="modal-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="modal-title">gestao_patrimonio_README.md</span>
+                <button class="modal-close" data-modal="modal-p1">✕</button>
+            </div>
+            <div class="modal-body">
+                <h4>Sobre o Projeto</h4>
+                <p>Sistema desktop para controle de patrimônio desenvolvido como projeto acadêmico. Permite cadastro, edição e visualização de ativos de uma organização.</p>
+                <h4>Período</h4>
+                <p>1º semestre de 2024</p>
+                <h4>Como foi feito</h4>
+                <p>A interface gráfica foi construída com PyQT5, proporcionando uma experiência desktop nativa em Python. O banco de dados MySQL armazena todos os registros com queries otimizadas para consulta e relatórios.</p>
+                <h4>Tecnologias</h4>
+                <p>
+                    <span class="modal-tag">Python</span>
+                    <span class="modal-tag">MySQL</span>
+                    <span class="modal-tag">PyQT5</span>
+                </p>
+                <h4>Desafios</h4>
+                <p>Integrar a interface gráfica com o banco de dados de forma eficiente, e projetar formulários responsivos dentro do PyQT5 que fossem intuitivos para o usuário final.</p>
+                <h4>Resultado</h4>
+                <p>Projeto aprovado na MIC (Mostra de Iniciação Científica) em 2025/1, reconhecido pela qualidade técnica e funcionalidade entregue.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal projeto 02 -->
+    <div class="modal-overlay" id="modal-p2">
+        <div class="modal-terminal">
+            <div class="modal-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="modal-title">controle_patrimonio_README.md</span>
+                <button class="modal-close" data-modal="modal-p2">✕</button>
+            </div>
+            <div class="modal-body">
+                <h4>Sobre o Projeto</h4>
+                <p>Aplicação desktop para controle de patrimônio integrada com um sistema web para visualização e consulta de informações.</p>
+                <h4>Período</h4>
+                <p>2º semestre de 2024</p>
+                <h4>Como foi feito</h4>
+                <p>Interface desktop construída com Java + JavaFX e SceneBuilder para o design das telas. O sistema web consome a mesma base de dados MySQL, permitindo acesso remoto às informações.</p>
+                <h4>Tecnologias</h4>
+                <p>
+                    <span class="modal-tag">Java</span>
+                    <span class="modal-tag">JavaFX</span>
+                    <span class="modal-tag">SceneBuilder</span>
+                    <span class="modal-tag">MySQL</span>
+                    <span class="modal-tag">JavaScript</span>
+                    <span class="modal-tag">HTML/CSS</span>
+                </p>
+                <h4>Desafios</h4>
+                <p>Manter sincronia entre a aplicação desktop e o sistema web, garantindo consistência dos dados em ambas as interfaces simultaneamente.</p>
+                <h4>Resultado</h4>
+                <p>Projeto aprovado na MIC (Mostra de Iniciação Científica) em 2025/2.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal projeto 03 -->
+    <div class="modal-overlay" id="modal-p3">
+        <div class="modal-terminal">
+            <div class="modal-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="modal-title">sistema_gestao_README.md</span>
+                <button class="modal-close" data-modal="modal-p3">✕</button>
+            </div>
+            <div class="modal-body">
+                <h4>Sobre o Projeto</h4>
+                <p>Versão mais robusta do sistema de patrimônio, com separação clara entre aplicação desktop e sistema web de consulta.</p>
+                <h4>Período</h4>
+                <p>1º semestre de 2025</p>
+                <h4>Como foi feito</h4>
+                <p>Desenvolvido em Java com JavaFX para o desktop e PostgreSQL como banco de dados. A aplicação web separada consome uma camada de serviço dedicada para consultas internas, de uso privado e restrito.</p>
+                <h4>Tecnologias</h4>
+                <p>
+                    <span class="modal-tag">Java</span>
+                    <span class="modal-tag">JavaFX</span>
+                    <span class="modal-tag">SceneBuilder</span>
+                    <span class="modal-tag">PostgreSQL</span>
+                    <span class="modal-tag">JavaScript</span>
+                    <span class="modal-tag">HTML/CSS</span>
+                </p>
+                <h4>Desafios</h4>
+                <p>Migração do banco para PostgreSQL e criação de uma camada de acesso para o sistema web, mantendo performance e segurança dos dados.</p>
+                <h4>Resultado</h4>
+                <p>Sistema completo com separação de responsabilidades. Aprovado na MIC 2026/1.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal projeto 04 -->
+    <div class="modal-overlay" id="modal-p4">
+        <div class="modal-terminal">
+            <div class="modal-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="modal-title">api_cadastro_README.md</span>
+                <button class="modal-close" data-modal="modal-p4">✕</button>
+            </div>
+            <div class="modal-body">
+                <h4>Sobre o Projeto</h4>
+                <p>API REST para cadastro e gerenciamento de usuários, com interface web para consumo da API.</p>
+                <h4>Período</h4>
+                <p>2º semestre de 2025 — projeto pessoal</p>
+                <h4>Como foi feito</h4>
+                <p>Back-end construído com Java Spring Boot expondo endpoints REST. O front-end em JavaScript consome a API via fetch, com telas de login e cadastro estilizadas em HTML/CSS.</p>
+                <h4>Tecnologias</h4>
+                <p>
+                    <span class="modal-tag">Java</span>
+                    <span class="modal-tag">Spring Boot</span>
+                    <span class="modal-tag">MySQL</span>
+                    <span class="modal-tag">JavaScript</span>
+                    <span class="modal-tag">HTML/CSS</span>
+                </p>
+                <h4>Desafios</h4>
+                <p>Estruturar uma API RESTful segura com validações no back-end e integrar corretamente com o front-end, tratando erros de forma amigável para o usuário.</p>
+                <h4>Resultado</h4>
+                <p>API funcional com CRUD completo de usuários e interface web responsiva.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal projeto 05 -->
+    <div class="modal-overlay" id="modal-p5">
+        <div class="modal-terminal">
+            <div class="modal-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="modal-title">sistema_eventos_README.md</span>
+                <button class="modal-close" data-modal="modal-p5">✕</button>
+            </div>
+            <div class="modal-body">
+                <h4>Status</h4>
+                <p>Projeto em andamento — README será atualizado quando concluído.</p>
+                <h4>Tecnologias</h4>
+                <p>
+                    <span class="modal-tag">PHP</span>
+                    <span class="modal-tag">JavaScript</span>
+                    <span class="modal-tag">HTML/CSS</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal projeto 06 -->
+    <div class="modal-overlay" id="modal-p6">
+        <div class="modal-terminal">
+            <div class="modal-header">
+                <div class="dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="modal-title">crystal_of_atlan_macro_README.md</span>
+                <button class="modal-close" data-modal="modal-p6">✕</button>
+            </div>
+            <div class="modal-body">
+                <h4>Sobre o Projeto</h4>
+                <p>Macro desenvolvido a pedido de um cliente para automação de rotação de combate com foco na classe Silhueta no jogo Crystal of Atlan. Entregue em duas versões para atender diferentes necessidades.</p>
+                <h4>Período</h4>
+                <p>Abril de 2026</p>
+                <h4>Versão Lua</h4>
+                <p>Versão mais simples, com foco em um loop contínuo de habilidades. Funciona diretamente no ambiente do jogo, mas mostrou-se limitada para o caso de uso do cliente.</p>
+                <h4>Versão AutoHotkey</h4>
+                <p>Desenvolvida com base em leitura de tela. Utiliza um calibrador para capturar coordenadas de pixels específicos — quando o pixel muda de cor, indica que um buff está disponível e a lógica dispara a habilidade correspondente automaticamente.</p>
+                <h4>Tecnologias</h4>
+                <p>
+                    <span class="modal-tag">Lua</span>
+                    <span class="modal-tag">AutoHotkey</span>
+                </p>
+                <h4>Desafios</h4>
+                <p>A versão Lua acabou não sendo utilizada por ser mais limitada. O verdadeiro desafio foi na versão AHK: identificar os pixels corretos na tela, calibrá-los com precisão e construir a lógica de detecção de mudança de cor para acionar os buffs no momento certo.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js">
 
