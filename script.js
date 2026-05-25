@@ -1,11 +1,13 @@
- const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
+            obs.unobserve(entry.target);
         }
     });
 }, {
-    threshold: 0.1 // Ativa quando 10% da seção estiver visível
+    threshold: 0.05,
+    rootMargin: '0px 0px -40px 0px'
 });
 
 const hiddenElements = document.querySelectorAll('.hidden');
@@ -28,9 +30,9 @@ window.addEventListener('load', () => {
 });
 
 
-//filtro de projetos 
+//filtro de projetos
 const botoes = document.querySelectorAll(".btn-filtro");
-const projetos = document.querySelectorAll(".projeto-card");
+const projetos = document.querySelectorAll("#projetos .projeto-card");
 
 botoes.forEach(botao => {
     botao.addEventListener("click", () => {
@@ -77,33 +79,20 @@ navLinks.forEach(link => {
 });
 
 
-//animacao jornada
-
-const steps = document.querySelectorAll('.journey-step');
-
-const journeyObserver = new IntersectionObserver(entries => {
+//animacao jornada + cards (observer unificado)
+const fadeObserver = new IntersectionObserver((entries, obs) => {
   entries.forEach(entry => {
-    if(entry.isIntersecting) {
+    if (entry.isIntersecting) {
       entry.target.classList.add('visible');
+      obs.unobserve(entry.target);
     }
   });
-}, { threshold: 0.2 });
+}, {
+  threshold: 0.05,
+  rootMargin: '0px 0px -30px 0px'
+});
 
-steps.forEach(step => journeyObserver.observe(step));
-
-
-//animacao de entrada das habilidades
-const projectCards = document.querySelectorAll('.projeto-card');
-
-const projectObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.2 });
-
-projectCards.forEach(card => projectObserver.observe(card));
+document.querySelectorAll('.journey-step, .projeto-card').forEach(el => fadeObserver.observe(el));
 
 
 // ===== MODAL =====

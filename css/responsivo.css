@@ -102,35 +102,41 @@
     display: none;
   }
 
+  /* === HERO PADDING === */
+  #hero {
+    padding: 14px 16px;
+    margin-top: 10px;
+  }
+
   /* === TÍTULOS E TEXTO === */
   #hero h1 {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     line-height: 1.5;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   #hero p {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     line-height: 1.6;
     margin-bottom: 10px;
   }
 
   .code-tag {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     opacity: 0.6;
   }
 
   .code-string {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
   }
 
   .code-var {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
   }
 
   .code-comment {
-    font-size: 0.78rem;
-    margin: 10px 0;
+    font-size: 0.72rem;
+    margin: 8px 0;
     opacity: 0.65;
   }
 
@@ -173,8 +179,16 @@
     padding: 16px 12px 32px;
   }
 
+  #hero {
+    padding: 10px 14px;
+  }
+
   #hero h1 {
-    font-size: 1rem;
+    font-size: 0.88rem;
+  }
+
+  #hero p {
+    font-size: 0.74rem;
   }
 
   .btn-group {
@@ -209,13 +223,18 @@
     display: none !important;
   }
 
+  #hero {
+    padding: 8px 12px !important;
+    margin-top: 0 !important;
+  }
+
   #hero h1 {
-    font-size: 0.95rem !important;
+    font-size: 0.85rem !important;
     margin-top: 0;
   }
 
   #hero p {
-    font-size: 0.75rem;
+    font-size: 0.72rem !important;
     margin-bottom: 8px;
   }
 
@@ -329,6 +348,13 @@
 }
 
 /* ── MOBILE (≤768px) ── */
+/* ── TOOLTIP: desabilita em touch ── */
+@media (hover: none) and (pointer: coarse) {
+  .tech-item::after {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
 
   /* NAVBAR */
@@ -520,6 +546,92 @@
     justify-content: center;
   }
 
+  /* TERMINAL DE PROJETOS / HABILIDADES */
+  .projetos-terminal {
+    border-radius: 8px;
+    margin: 0 !important;
+  }
+
+  .projetos-terminal-header {
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 10px 12px;
+  }
+
+  .projetos-terminal-title {
+    font-size: 0.75rem;
+    flex: 1;
+    text-align: center;
+  }
+
+  .title-main {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .projetos-stats {
+    font-size: 0.65rem;
+    padding: 8px 12px;
+    white-space: normal;
+    line-height: 1.6;
+  }
+
+  .filtro-bloco {
+    padding: 10px 12px;
+  }
+
+  .filtro-linha-cmd {
+    font-size: 0.7rem;
+  }
+
+  /* MODAL */
+  .modal-terminal {
+    width: 95vw;
+    max-height: 85vh;
+    margin: 10px;
+  }
+
+  .modal-title {
+    font-size: 0.7rem;
+  }
+
+  .modal-body {
+    padding: 14px;
+    font-size: 0.82rem;
+  }
+
+  .modal-body h4 {
+    font-size: 0.85rem;
+  }
+
+  .modal-tag {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+
+  /* CARD LINKS */
+  .card-links {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .btn-saiba-mais,
+  .btn-project {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+
+  /* STATUS BADGE */
+  .status-badge {
+    font-size: 0.55rem;
+    padding: 2px 6px;
+  }
+
+  /* LOGO GRID EM HABILIDADES */
+  #habilidades .logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   /* FORMULÁRIO DE CONTATO */
   .form-grid {
     grid-template-columns: 1fr;
@@ -580,6 +692,26 @@
 
   .tech-item span {
     font-size: 0.7rem;
+  }
+
+  /* TERMINAL */
+  .title-main {
+    font-size: 0.85rem;
+    letter-spacing: 0;
+  }
+
+  .title-dim {
+    display: none;
+  }
+
+  #habilidades .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* MODAL */
+  .modal-terminal {
+    width: 98vw;
+    max-height: 90vh;
   }
 
   /* JORNADA */
