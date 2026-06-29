@@ -7,13 +7,55 @@
     <link rel="stylesheet" href="css/sytle.css">
     <link rel="stylesheet" href="css/responsivo.css">
     <link rel="icon" href="img/icone.png" type="image/x-icon">
+    <style>
+        .lang-switcher {
+            position: fixed;
+            top: 16px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 1px;
+            background: rgba(10, 14, 26, 0.82);
+            border: 1px solid rgba(0, 247, 255, 0.15);
+            border-radius: 6px;
+            padding: 2px 3px;
+            backdrop-filter: blur(10px);
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: rgba(148, 163, 184, 0.55);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 4px 8px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+            letter-spacing: 0.1em;
+        }
+        .lang-btn:hover {
+            color: #94a3b8;
+        }
+        .lang-btn.active {
+            background: rgba(0, 247, 255, 0.12);
+            color: #00f7ff;
+        }
+    </style>
 </head>
 <body>
-<header> 
+<div class="lang-switcher">
+    <button class="lang-btn" data-lang="pt">PT</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+</div>
+
+<header>
     <nav class="projetos">
-        <ul> 
-            <li><a href="indexSM.html#projetos">Projetos</a></li>
-            <li><a href="indexSM.html#contato">Contato</a></li>
+        <ul>
+            <li><a href="indexSM.html#projetos" data-i18n="nav_projects">Projetos</a></li>
+            <li><a href="indexSM.html#contato" data-i18n="nav_contact">Contato</a></li>
         </ul>
     </nav>
 </header>
@@ -21,7 +63,7 @@
 <div class="pag-inicial">
 
 
-<div class="sobre_mim"> 
+<div class="sobre_mim">
     <div class="code-header">
         <div class="buttons">
             <span class="dot red"></span>
@@ -30,7 +72,7 @@
         </div>
         <div class="tab">index.html</div>
     </div>
-    
+
     <div class="code-content">
         <div class="line-numbers">
             <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
@@ -38,24 +80,22 @@
         <div id="hero">
             <h1>
                 <span class="code-tag">&lt;h1&gt;</span>
-                Olá, eu sou <span class="code-string"> <span class="typing">Emelly Levandoscki</span> </span>
+                <span data-i18n="hero_greeting">Olá, eu sou</span> <span class="code-string"> <span class="typing">Emelly Levandoscki</span> </span>
                 <span class="code-tag">&lt;/h1&gt;</span>
             </h1>
 <p>
     <span class="code-tag">&lt;p&gt;</span>
-    Estudante de tecnologia com foco em desenvolvimento <span class="code-var">Front-end</span> e <span class="code-var">Back-end</span>. 
-    Interessada em aprender novas ferramentas e em como construir aplicações completas, 
-    do layout ao servidor. <span class="code-string">"Em constante evolução acadêmica e técnica."</span>
+    <span data-i18n-html="hero_desc">Estudante de tecnologia com foco em desenvolvimento <span class="code-var">Front-end</span> e <span class="code-var">Back-end</span>.
+    Interessada em aprender novas ferramentas e em como construir aplicações completas,
+    do layout ao servidor. <span class="code-string">"Em constante evolução acadêmica e técnica."</span></span>
     <span class="code-tag">&lt;/p&gt;</span>
 </p>
 
-    <div class="code-comment">// Movida pela curiosidade e pelo desejo de criar algo real.</div>
-    
+    <div class="code-comment" data-i18n="hero_comment">// Movida pela curiosidade e pelo desejo de criar algo real.</div>
+
 <div class="btn-group">
-    <a href="indexSM.html" class="btn">Mais_s0bre_mim.exe</a>
-    <a href="Currículo Emelly Levandoscki.pdf" class="btn" download="Currículo Emelly Levandoscki.pdf">
-    currículo.pdf
-</a>
+    <a href="indexSM.html" class="btn" data-i18n="btn_about">Mais_s0bre_mim.exe</a>
+    <a href="Curriculo_Emelly_Levandoscki_PT.pdf" class="btn" download="Curriculo_Emelly_Levandoscki_PT.pdf" data-i18n="btn_curriculum" data-i18n-href="curriculum_href" data-i18n-download="curriculum_download">currículo.pdf</a>
 </div>
         </div>
     </div>
@@ -75,7 +115,7 @@
         <div class="binary-column">10101010101010101010100101010101011010101010101010110011010101010101010101010100101010101011010101010101010110011010010101010101011010101010101010101010110101010101010101010101011010101101010</div>
         <div class="binary-column">101010101010101010101001010101010110101010101010101100110101010101010101010101001010101010110101010101010101100110100101010101010110101010101010101010101101010101010101010101010110101011010101</div>
         <div class="binary-column">10101010101010101010100101010101011010101010101010110011010101010101010101010100101010101011010101010101010110011010010101010101011010101010101010101010110101010101010101010101011010101101010</div>
-         
+
                 <div class="binary-column">10101010101010101010100101010101011010101010101010110011010101010101010101010100101010101011010101010101010110011010010101010101011010101010101010101010110101010101010101010101011010101101010</div>
         <div class="binary-column">101010101010101010101001010101010110101010101010101100110101010101010101010101001010101010110101010101010101100110100101010101010110101010101010101010101101010101010101010101010110101011010101</div>
         <div class="binary-column">10101010101010101010100101010101011010101010101010110011010101010101010101010100101010101011010101010101010110011010010101010101011010101010101010101010110101010101010101010101011010101101010</div>
@@ -87,7 +127,7 @@
         <div class="binary-column">10101010101010101010100101010101011010101010101010110011010101010101010101010100101010101011010101010101010110011010010101010101011010101010101010101010110101010101010101010101011010101101010</div>
         <div class="binary-column">101010101010101010101001010101010110101010101010101100110101010101010101010101001010101010110101010101010101100110100101010101010110101010101010101010101101010101010101010101010110101011010101</div>
         <div class="binary-column">10101010101010101010100101010101011010101010101010110011010101010101010101010100101010101011010101010101010110011010010101010101011010101010101010101010110101010101010101010101011010101101010</div>
-         
+
         <div class="binary-column">10101010101010101010100101010101011010101010101010110011010101010101010101010100101010101011010101010101010110011010010101010101011010101010101010101010110101010101010101010101011010101101010</div>
         <div class="binary-column">10101010101010101010100101010101011010101010101010110011010101010101010101010100101010101011010101010101010110011010010101010101011010101010101010101010110101010101010101010101011010101101010</div>
         <div class="binary-column">101010101010101010101001010101010110101010101010101100110101010101010101010101001010101010110101010101010101100110100101010101010110101010101010101010101101010101010101010101010110101011010101</div>
@@ -126,21 +166,21 @@
         <div class="binary-column">10101010101010101010100101010101011010101010101010110011010101010101010101010100101010101011010101010101010110011010010101010101011010101010101010101010110101010101010101010101011010101101010</div>
 
 </div>
- </div>   
+ </div>
 
  <div class="espaco">
 </div>
 
 
 <footer>
-    <p>&copy; 2026 - Criado por 
+    <p>&copy; 2026 - <span data-i18n="footer_created">Criado por</span>
         <a href="https://github.com/EmeLevandoscki" target="_blank" class="github-link">
             @EmeLevandoscki <i class="fab fa-github"></i>
         </a>
     </p>
 </footer>
 
-    <script >
+    <script>
 window.addEventListener('DOMContentLoaded', () => {
     const boxSobreMim = document.querySelector('.sobre_mim');
     const binaryBackground = document.querySelector('.binary-wrapper');
@@ -149,12 +189,13 @@ window.addEventListener('DOMContentLoaded', () => {
         if (binaryBackground) {
             binaryBackground.classList.add('ready');
         }
-        
+
         if (boxSobreMim) {
             boxSobreMim.classList.add('ready');
         }
     }, 300);
 });
     </script>
+    <script src="i18n.js"></script>
 </body>
 </html>
