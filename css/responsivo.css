@@ -294,6 +294,11 @@
     padding: 20px !important;
   }
 
+  .foto-perfil {
+    align-self: center;
+    margin-top: 0;
+  }
+
   .foto-perfil img {
     width: 100px;
     height: 100px;
@@ -404,6 +409,11 @@
     text-align: center;
     padding: 16px !important;
     gap: 16px;
+  }
+
+  .foto-perfil {
+    align-self: center;
+    margin-top: 0;
   }
 
   .foto-perfil img {
@@ -777,6 +787,11 @@
     align-items: center;
     padding: 12px !important;
     gap: 12px;
+  }
+
+  .foto-perfil {
+    align-self: center;
+    margin-top: 0;
   }
 
   .foto-perfil img {
