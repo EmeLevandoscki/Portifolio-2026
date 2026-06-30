@@ -200,6 +200,11 @@ section {
 }
 
 /* foto */
+.foto-perfil {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
 .foto-perfil img {
     width: 160px;
     height: 160px;
