@@ -11,8 +11,8 @@ const translations = {
     hero_comment: "// Movida pela curiosidade e pelo desejo de criar algo real.",
     btn_about: "Mais_s0bre_mim.exe",
     btn_curriculum: "currículo.pdf",
-    curriculum_href: "Curriculo_Emelly_Levandoscki_PT.pdf",
-    curriculum_download: "Curriculo_Emelly_Levandoscki_PT.pdf",
+    curriculum_href: "Curriculo_Emelly_Levandoscki_PT_.pdf",
+    curriculum_download: "Curriculo_Emelly_Levandoscki_PT_.pdf",
 
     about_greeting: "Olá, eu sou",
     about_desc: `Estudante de <span class="highlight-orange">Análise e Desenvolvimento de Sistemas</span>, atuando no desenvolvimento de aplicações tanto no <span class="highlight-orange">Back-end</span> quanto no <span class="highlight-orange">Front-end</span>. Tenho foco em aprendizado contínuo e aprimoramento técnico, buscando oportunidades e projetos que me permitam evoluir minhas habilidades e entregar soluções eficientes.`,
