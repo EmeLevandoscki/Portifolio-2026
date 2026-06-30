@@ -163,8 +163,8 @@ const translations = {
     hero_comment: "// Driven by curiosity and the desire to build something real.",
     btn_about: "M0re_ab0ut_me.exe",
     btn_curriculum: "resume.pdf",
-    curriculum_href: "Resume_Emelly_Levandoscki_EN.pdf",
-    curriculum_download: "Resume_Emelly_Levandoscki_EN.pdf",
+    curriculum_href: "Resume_Emelly_Levandoscki_EN_.pdf",
+    curriculum_download: "Resume_Emelly_Levandoscki_EN_.pdf",
 
     about_greeting: "Hello, I'm",
     about_desc: `Student of <span class="highlight-orange">Systems Analysis and Development</span>, working on application development in both <span class="highlight-orange">Back-end</span> and <span class="highlight-orange">Front-end</span>. I focus on continuous learning and technical improvement, seeking opportunities and projects that allow me to evolve my skills and deliver efficient solutions.`,
@@ -315,8 +315,8 @@ const translations = {
     hero_comment: "// Impulsada por la curiosidad y el deseo de crear algo real.",
     btn_about: "M4s_s0bre_mi.exe",
     btn_curriculum: "currículum.pdf",
-    curriculum_href: "Curriculum_Emelly_Levandoscki_ES.pdf",
-    curriculum_download: "Curriculum_Emelly_Levandoscki_ES.pdf",
+    curriculum_href: "Curriculum_Emelly_Levandoscki_ES_.pdf",
+    curriculum_download: "Curriculum_Emelly_Levandoscki_ES_.pdf",
 
     about_greeting: "Hola, soy",
     about_desc: `Estudiante de <span class="highlight-orange">Análisis y Desarrollo de Sistemas</span>, trabajando en el desarrollo de aplicaciones tanto en el <span class="highlight-orange">Back-end</span> como en el <span class="highlight-orange">Front-end</span>. Me enfoco en el aprendizaje continuo y la mejora técnica, buscando oportunidades y proyectos que me permitan evolucionar mis habilidades y entregar soluciones eficientes.`,
